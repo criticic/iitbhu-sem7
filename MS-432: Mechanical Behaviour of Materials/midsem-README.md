@@ -1323,7 +1323,7 @@ Note the paper header: **"Please be brief and to the point while answering."** T
    * If a question is marked **(1+1+2)**:
      * 1 mark for definition.
      * 1 mark for types.
-     * 2 marks for Burgers vector relationship ($\vec{b} \perp \hat{t}$ vs $\vec{b} \parallel \hat{t}$).
+     * 2 marks for Burgers vector relationship: edge ($\vec{b} \perp \hat{t}$) and screw ($\vec{b} \parallel \hat{t}$).
 
 #### B. Time Management (30 Marks / Typically 60–90 Minutes)
 
