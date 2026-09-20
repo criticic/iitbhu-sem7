@@ -1,0 +1,14 @@
+{
+  // Tuned for these LaTeX-heavy course notes. Rules that conflict with the
+  // repo's established style are disabled; the rest run as normal.
+  "config": {
+    "MD013": false, // long prose / tables / math lines are intentional
+    "MD022": false, // `---` separators and <a name> anchors sit next to headings
+    "MD024": { "siblings_only": true },
+    "MD032": false, // blockquote lists follow lead-in text lines by design
+    "MD033": false, // <br>, <sub>, <a name> used intentionally
+    "MD036": false, // bold/italic pseudo-headings (sub-labels)
+    "MD040": false, // ASCII diagrams use bare triple-backtick fences
+    "MD051": false // TOC uses explicit <a name> anchors
+  }
+}

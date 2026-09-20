@@ -1,25 +1,8 @@
 # AGENTS.md
 
 Markdown course notes for Semester 7 (e.g. `EP-361: Remote Sensing/`). Tracked
-in git (`git@github.com:criticic/iitbhu-sem7.git`, mirroring `iitbhu-sem6`); no
-package manager. **Plain Markdown with LaTeX math — not Typst.**
-The style mirrors the author's Semester 6 notes at `../Semester 6/`
-(`iitbhu-sem6`), which are the canonical reference for content and tone: read a
-subject folder there (`CHI-322`, `CSE-465`, `MS-332`, `MS-431`) before writing.
-
-## Style source of truth
-
-- `../Semester 6/CHI-322/midsem-README.md` and `README.md` — closest model for
-  content, tone, and inline past-exam Q&A.
-- `../Semester 6/CSE-465/README.md` — alternate structure (`## N.` units,
-  `### Past Endsem Q&A:` blocks); heavy comparison tables.
-- `../Semester 6/MS-431/*` — image-heavy variant (`images/`), `> **Exam tip:**`
-  callouts.
-- `../Semester 6/CHI-322/midsem-question-papers.md` — question-bank format.
-
-Semester-6 folders are **read-only references** — never edit them. Match their
-content but apply this repo's heading/numbering scheme below (the Semester-6
-sources number sub-units `### N.M` / `## N.`; do not copy those forms).
+in git (`git@github.com:criticic/iitbhu-sem7.git`); no package manager.
+**Plain Markdown with LaTeX math — not Typst.**
 
 ## Layout
 
@@ -30,6 +13,7 @@ sources number sub-units `### N.M` / `## N.`; do not copy those forms).
   - `README.md` — full-semester notes (when needed).
   - `midsem-question-papers.md`, `question-papers.md` — question banks only.
   - `images/` — figure assets referenced as `![alt](images/name.png)`.
+- `.markdownlint-cli2.jsonc` — markdownlint config (see Verification).
 - No build step; there is no compiler. Verify by structure checks and by
   rendering (see Verification).
 
@@ -71,9 +55,8 @@ sources number sub-units `### N.M` / `## N.`; do not copy those forms).
 ```
 
 - `---` after the title, after the TOC, before/between every `##` section.
-- Numbering (the **single** scheme for this repo): `## Part N:` units, `### M.`
-  sub-units restarting at `1` inside each Part, `#### A.` sub-sub-units. Do not
-  mix in the Semester-6 `### N.M` or `## N.` forms.
+- Numbering: `## Part N:` units, `### M.` sub-units restarting at `1` inside
+  each Part, and `#### A.` sub-sub-units. Do not mix schemes.
 - TOC lists the Parts and the `Exam Strategy` section. Links are GitHub slugs
   (`#part-1`, `#exam-strategy--preparation-tips`); `&` becomes `--`, and
   dashes/parentheses are dropped.
@@ -85,8 +68,8 @@ sources number sub-units `### N.M` / `## N.`; do not copy those forms).
 - Bold lead-ins with a colon: `- **Term:** definition`. Italic sub-labels:
   `*Formula:*`, `*Unit:*`, `*Note:*`, `*Applicability:*`, `*Limitation:*` —
   but never put inline math inside those italics (see Math / LaTeX).
-- Nested lists: **three-space** indent (matches the reference files). Use `-` for
-  bullets (stay consistent within a file) and `1.` for steps.
+- Nested lists: **three-space** indent. Use `-` for bullets (stay consistent
+  within a file) and `1.` for steps.
 - Tables always include an alignment row (`| :--- |`, `|:---:|` for scoreboards).
   "X vs Y" comparison tables are expected. Inside cells use `<br>` for line
   breaks and `\dfrac` for fractions; escape a literal pipe as `\|`.
@@ -114,7 +97,7 @@ sources number sub-units `### N.M` / `## N.`; do not copy those forms).
   ```
 
   Every line of the block (including blank lines and display math) is prefixed
-  with `> `. Marks go in italic parentheses: `*(3 + 3 Marks)*`. Combine multi-part
+  with `>` and a space. Marks go in italic parentheses: `*(3 + 3 Marks)*`. Combine multi-part
   questions on one header (`**Q:** ... / **Q:** ...`) and use
   `**Answer Structure:**`, `**Answer Comparison:**`, or `**Solution:**` when
   those fit better than a plain `**Answer:**`.
@@ -259,6 +242,20 @@ browser).
 
 Grep for missing content against the source the file was converted from;
 **content fidelity matters more than formatting**.
+
+### 4. Markdown lint (markdownlint-cli2)
+
+Lint every note with the repo's tuned config (`.markdownlint-cli2.jsonc`):
+
+```sh
+bunx markdownlint-cli2 "**/*.md"
+```
+
+Expect `Summary: 0 issues`. The config disables only the rules that conflict
+with the notes' intentional style (long lines; inline HTML `<br>`/`<sub>`/
+`<a name>`; bare ASCII fences; `---`-adjacent headings; blockquote lists;
+bold/italic pseudo-headings; `<a name>` TOC anchors) — everything else must
+pass.
 
 ## Workflow
 
