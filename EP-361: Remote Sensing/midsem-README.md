@@ -1291,7 +1291,7 @@ Absorption Coefficient k_H2O (dB/km)
 3. **Extension from $100$ to $300\ \text{GHz}$:**
    At higher frequencies, the 10 lowest rotational transitions must be explicitly summed using the Gross/VVW line shape:
 
-   $$k_{\text{H}_2\text{O}}(f) = 2 f^2 \rho_v \left(\frac{300}{T}\right)^{5/2} \sum_{i=1}^{10} A_i \exp\left(-\frac{\mathcal{E}_i}{T}\right) \left[ \frac{\gamma_i}{(f_i^2 - f^2)^2 + 4 f^2 \gamma_i^2} \right] + \Delta k(f)$$
+   $$k _{\text{H} _2\text{O}}(f) = 2 f^2 \rho _v \left(\frac{300}{T}\right)^{5/2} \sum _{i=1}^{10} A _i \exp\left(-\frac{\mathcal{E} _i}{T}\right) \left[ \frac{\gamma _i}{(f _i^2 - f^2)^2 + 4 f^2 \gamma _i^2} \right] + \Delta k(f)$$
    with the empirical correction term:
 
    $$\Delta k(f) = 4.69 \times 10^{-6} \rho_v \left(\frac{300}{T}\right)^{2.1} \left(\frac{P}{1000}\right) f^2 \quad [\text{dB/km}]$$
@@ -1330,11 +1330,8 @@ Absorption Coefficient k_O2 (dB/km)
    where the oxygen linewidth parameter $\gamma$ depends on total dry air pressure:
 
    $$\gamma = \gamma_0 \left(\frac{P}{1013}\right) \left(\frac{300}{T}\right)^{0.85} \quad [\text{GHz}]$$
-   $$\gamma_0 = \begin{cases}
-   0.59, & P \ge 333\ \text{mbar} \\
-   0.59 \left[1 + 3.1 \times 10^{-3}(333 - P)\right], & 25\ \text{mbar} \le P \le 333\ \text{mbar} \\
-   1.018, & P < 25\ \text{mbar}
-   \end{cases}$$
+
+   $$\gamma_0 = 0.59 \ \ (P \ge 333\ \text{mbar}); \qquad \gamma_0 = 0.59 \left[1 + 3.1 \times 10^{-3}(333 - P)\right] \ \ (25 \le P \le 333\ \text{mbar}); \qquad \gamma_0 = 1.018 \ \ (P < 25\ \text{mbar})$$
 
 ---
 

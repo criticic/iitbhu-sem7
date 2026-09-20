@@ -137,8 +137,10 @@ sources number sub-units `### N.M` / `## N.`; do not copy those forms).
   ones may be `$H_2O$`, `$CO_2$`.
 - **GitHub inline-math pitfalls** (verified against GitHub's own renderer — these
   make math render as literal `$`):
-  - Keep the delimiters tight: no space inside (`$x$`, not `$ x $`) and a space
-    outside (`$x$ and`); math touching a word breaks (`$x$and`, `word$x$`).
+  - Keep the delimiters tight: no space inside (`$x$`, not `$ x $`). The opening
+    `$` must be preceded by whitespace, a tab, start-of-line, or `(` — any other
+    immediate predecessor breaks it: `word$x$`, `$x$and`, `-$x$`, `$x$-$y$`
+    (the second span), `,$x$`, `]$x$`.
   - **Never place inline math inside an emphasis/italic span** (`*...*`, `_..._`,
     `<em>`): GitHub fails to render it. `**bold**` and plain text are safe. Fix by
     dropping the italics, or splitting the italic around the math —
@@ -148,6 +150,19 @@ sources number sub-units `### N.M` / `## N.`; do not copy those forms).
     followed by `)` also fails, e.g. `$(100)$)`. Restructure so the closing `$`
     is followed by space/word/other punctuation — prefer
     `**$\\{001\\}$ plane**, such as $(001)$ or $(100)$.`
+  - **Display `$$...$$` must be its own block** — put a blank line before it (a
+    blank `>` line inside a blockquote). Mid-paragraph `$$...$$` (a continuation
+    line following text) is not recognized, and its `_{...}` subscripts then get
+    parsed as emphasis. Also avoid multi-line `$$ ... \\ ... $$` blocks (e.g.
+    `\begin{cases}` with `\\` row breaks) inside list items — prefer a
+    single-line display formula (separate cases with `;` or `\quad`).
+  - A math span whose content *begins* with `_` (subscript-only, e.g.
+    `$_{\text{Subj}}$`) fails when two or more appear on a line, and `}` or `]`
+    immediately before `_{` (`\text{VP}_{\text{complex}}`) turns into emphasis
+    when the math is not recognized. For non-mathematical labels use HTML
+    `<sub>...</sub>` (e.g. `[The house]<sub>Topic</sub>`); for real math attach a
+    base or insert a space before the `_` (`\text{VP} _{\text{complex}}` — the
+    space is ignored by TeX).
   - GitHub strips `\` from `\{`/`\}` inside math, so `$\{111\}$` loses the braces
     (they render as invisible grouping). **Always write literal braces doubled:**
     `$\\{111\\}$` (or equivalently `$\lbrace 111\rbrace$`), e.g. `$\\{hkl\\}$`,
@@ -232,9 +247,13 @@ EOF
 ```
 
 A `FAILED math spans` count greater than zero means some inline math rendered as
-literal `$` — fix the offending span using the Math rules above. Note: the API
-only wraps math in `<math-renderer>`; KaTeX runs in the browser, so an
-unsupported command will still be "wrapped" (verify commands in a browser).
+literal `$` — fix the offending span using the Math rules above. When a
+*specific* block fails, locate it by finding the literal `$` in the rendered
+HTML; the usual fixes are to separate display math with a blank line, avoid
+multi-line `\\`-row blocks inside lists, or insert a space before a problematic
+`_{`. Note: the API only wraps math in `<math-renderer>`; KaTeX runs in the
+browser, so an unsupported command will still be "wrapped" (verify commands in a
+browser).
 
 ### 3. Content fidelity
 

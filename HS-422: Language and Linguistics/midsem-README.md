@@ -755,11 +755,15 @@ A **rule** is the abstract, explicit, and systematic mental formulation of a lin
 **Analogy** is the cognitive process whereby a speaker extends a familiar linguistic pattern from known items to a novel or less familiar item because they share structural, categorical, or functional similarities.
 
 * **Proportional Analogy:** Defined by the four-part mathematical mapping operation:
+
   $$\mathbf{A : B :: C : X} \quad (\text{"A is to B as C is to X"})$$
   * *Standard English Past Tense:*
+
     $$\text{walk} : \text{walked} :: \text{jump} : \mathbf{X} \quad \implies \mathbf{X} = \text{jumped}$$
   * *Analogical Formation in Child Language:*
+
     $$\text{sing} : \text{sang} :: \text{bring} : \mathbf{X} \quad \implies \mathbf{X} = \text{brang} \quad (\text{innovative overgeneralization})$$
+
     $$\text{dog} : \text{dogs} :: \text{child} : \mathbf{X} \quad \implies \mathbf{X} = \text{childs}$$
 
 ---
@@ -808,11 +812,14 @@ In South Asian languages like Hindi, verbal predication relies heavily on comple
 ```
 
 * **The Underlying Rule:**
+
   $$\text{Complex Predicate} \to \text{V1 (Bare Stem)} + \text{V2 (Light Verb + Inflection)}$$
   * If $\text{V2} = \text{लेना}$ (*lenā* / "take") $\to$ action oriented toward the self / intentional completion.
   * If $\text{V2} = \text{पड़ना}$ (*paṛnā* / "fall") $\to$ involuntary, sudden, non-volitional inception of state.
 * **Analogical Extension:** Once a learner masters the sub-rule that *पड़ना* marks sudden involuntary inception (*ro paṛā*), they analogically extend it to other emotion and reaction verbs:
+
   $$\text{रो} : \text{रो पड़ा} :: \text{हँस} : \mathbf{X} \quad \implies \mathbf{X} = \text{हँस पड़ा}$$
+
   $$\text{चीख} : \mathbf{X} \quad \implies \mathbf{X} = \text{चीख पड़ा} \quad (\text{"screamed out suddenly"})$$
 
 ---
@@ -840,6 +847,7 @@ In South Asian languages like Hindi, verbal predication relies heavily on comple
 >   * Demonstrative + Adjective + Noun: *यह लाल किताब* (*yeh lāl kitāb* — "this red book").
 >   * Genitive Phrase + Adjective + Noun: *राम की बड़ी किताब* (*Rām-kī baṛī kitāb* — "Ram's big book").
 > * **The Abstract Rule (Generative Phrase-Structure Formulation):**
+>
 >   $$\text{NP} \to (\text{DemP}) \quad (\text{GenP}) \quad (\text{AdjP}) \quad \mathbf{N_{head}}$$
 > * **Application of Constraints:** If we alter this rule linearly without adhering to structure (e.g., placing the head noun initially: *\*किताब लाल यह* — *\*kitāb lāl yeh*), the phrase becomes strictly ungrammatical. The rule dictates that the head noun must occupy the final, dominant position in its phrase, demonstrating how an abstract rule strictly governs the surface pattern.
 
@@ -863,6 +871,7 @@ In South Asian languages like Hindi, verbal predication relies heavily on comple
 >
 > **2. The Structural Rule:**
 > The syntactic-morphological rule can be formalized as:
+>
 > $$\text{VP}_{\text{complex}} \to \mathbf{V_{1\ [lexical\ stem]}} + \mathbf{V_{2\ [light\ verb\ +\ TAM\ +\ Agr]}}$$
 > * **Semantic Constraint Rule:** $V_2$ sheds its literal lexical meaning (e.g., *ḍālnā* usually means "to drop/pour," but as a light verb it encodes forceful or hasty completion; *paṛnā* means "to fall," but functions to encode spontaneous, non-volitional inception).
 > * **Agreement Rule:** Tense-aspect-mood inflections attach exclusively to $V_2$, matching the gender/number of the absolutive argument in ergative configurations.
@@ -870,10 +879,14 @@ In South Asian languages like Hindi, verbal predication relies heavily on comple
 > **3. The Role of Analogy:**
 > Speakers do not memorize every light verb combination as an isolated lexical idiom. Instead, they use **proportional analogy ($A:B::C:X$)** to extend the construction productively to new verbs:
 > * A child observes the pattern for sudden, involuntary emotional outbursts:
+>
 >   $$\text{रो (cry)} : \text{रो पड़ा (burst into tears)}$$
 > * By analogy, the speaker maps this rule onto other intransitive emotion or physical reaction verbs:
+>
 >   $$\text{हँस (laugh)} : \mathbf{X} \quad \implies \mathbf{X} = \text{हँस पड़ा (burst out laughing)}$$
+>
 >   $$\text{चीख (scream)} : \mathbf{X} \quad \implies \mathbf{X} = \text{चीख पड़ा (cried out suddenly)}$$
+>
 >   $$\text{कूद (jump)} : \mathbf{X} \quad \implies \mathbf{X} = \text{कूद पड़ा (jumped suddenly)}$$
 >
 > Through analogy, the abstract rule governing the complex verb pattern becomes productively generalizable across the entire verbal lexicon.
@@ -905,6 +918,7 @@ In South Asian languages like Hindi, verbal predication relies heavily on comple
 >
 > 1. **Categorical Abstraction:** Rules replace concrete words with abstract grammatical categories ($N, V, Adj, P$). A speaker does not learn individual combinations like *"the + apple"* or *"the + boy"*; they internalize the abstract rule: $\text{NP} \to \text{Determiner} + \text{Noun}$.
 > 2. **Structural Trees over Linear Sequences:** Rules represent patterns through **hierarchical phrase structure** rather than flat strings. In a phrase-structure rule:
+>
 >    $$\text{VP} \to \mathbf{V} \quad \mathbf{NP}$$
 >    The rule specifies that the verb and its direct object form a tightly bound structural constituent (VP) that excludes the subject NP.
 > 3. **Parametric Constraints:** Rules specify conditions and operational limits. For example, in transformational rules (such as Question Formation), the rule does not say *"Move the third word to the front"*; it states: *"Move the auxiliary verb dominated by the matrix Inflection Phrase to the Complementizer position."*
@@ -988,6 +1002,7 @@ Because structural boundaries cannot be determined by visual inspection or intui
 | :--- | :--- | :--- | :--- |
 | **1. Replacement (Substitution)** | If a sequence can be replaced by a single pro-form (pronoun, *do so*, *there*, *then*) while preserving the sentence's grammatical relations, the sequence forms a constituent. | • **NP:** I met [the new professor] $\to$ I met **her**.<br>• **PP:** She lives [in New Delhi] $\to$ She lives **there**.<br>• **VP:** Ravi [read the paper], and Meera **did so** too. | **Negative evidence is inconclusive:** Not every valid constituent has a convenient pro-form in English. Pro-forms like *do so* are restricted to non-stative VPs. |
 | **2. Movement (Topicalization / Fronting)** | If a sequence can be moved together as an intact block to another syntactic position (such as clause-initial position), it is a constituent. | • *The students read [the article] in the library.* $\to$ **[The article]**, the students read __ in the library.<br>• *[The old wooden table] collapsed.* $\to$ **[The old wooden table]**, we moved __ yesterday.<br>• *\*[Old wooden]* the table, we moved yesterday. | **Island constraints and discourse factors:** Constituents trapped inside complex noun phrases or coordinate structures cannot move due to syntactic islands, even though they are constituents. |
+
 | **3. It-Clefting** | Evaluates whether a sequence can occupy the focused position in the construction:<br>$$\text{It} + \text{BE} + \mathbf{[Target]} + \text{that/who}\dots$$ | • **NP:** Maya bought [the red book]. $\to$ *It was **[the red book]** that Maya bought.*<br>• **PP:** Maya met him [in the library]. $\to$ *It was **[in the library]** that Maya met him.*<br>• **AdvP:** Maya left [very quickly]. $\to$ *It was **[very quickly]** that Maya left.* | Mainly tests maximal projections like NPs, PPs, and AdvPs. Non-finite VPs rarely fit cleft frames comfortably (*?\*It was [read the book] that Maya did*). |
 | **4. Question–Answer (Fragment Test)** | If a string can stand alone as a natural, felicitous response to a corresponding *wh-*question, it forms a constituent. | • *"What did Maya buy?"* $\to$ **[The red book]**.<br>• *"Where did the teacher open it?"* $\to$ **[In the classroom]**.<br>• *"When did they arrive?"* $\to$ **[After lunch]**. | **Fragment ellipsis:** Pragmatic conversational contexts occasionally license non-constituent elliptical fragments in casual discourse. Must be supported by other tests. |
 
@@ -1110,6 +1125,7 @@ Demonstratives carry rigid morphosyntactic features for **Number** (Singular vs.
 >
 > **3. The Question-Formation Proof (Chomsky's Diagnostic):**
 > Consider the declarative sentence:
+>
 > $$\text{[}_{\text{IP}} \text{ [}_{\text{DP}} \text{The boy [}_{\text{CP}} \text{who } \mathbf{is}_{\mathbf{1}} \text{ singing]} \text{]} \ \mathbf{is}_{\mathbf{2}} \ \text{my brother]}$$
 >
 > * **The Linear Rule Prediction:**
@@ -1196,10 +1212,12 @@ A **linguistic universal** is a structural pattern, architectural constraint, or
 
 * **Non-Implicational Universals:**
   * Unconditional statements asserting the existence (or absence) of a specific feature across all languages, independent of any other property:
+
   * $$\text{Feature X exists in all languages}$$
   * *Examples:* All languages have pronouns; all spoken languages have oral vowels; all languages have stops.
 * **Implicational Universals:**
   * Conditional statements linking the presence of one grammatical feature to the mandatory or statistical presence of another:
+
   * $$\text{If a language has Feature X} \implies \text{it will also have Feature Y}$$
   * *Example:* *If a language has dominant VSO word order, it is always prepositional.* (Greenberg Universal 3).
 
@@ -1383,7 +1401,7 @@ HEAD-INITIAL / VO HARMONY (e.g., English, Arabic)
 > ```
 >
 > 1. **Basic Clause Structure:** The finite verb appears in the clause-final position:
->    * *Hindi:* $\text{[राम]}_{\text{S}} \ \text{[किताब]}_{\text{O}} \ \text{[पढ़ता है]}_{\text{V}}$ (*Rām kitāb paṛhtā hai*).
+>    * *Hindi:* $\text{[राम]} _{\text{S}} \ \text{[किताब]} _{\text{O}} \ \text{[पढ़ता है]} _{\text{V}}$ (*Rām kitāb paṛhtā hai*).
 > 2. **Adpositional Harmony (Greenberg Universal 4):** SOV languages are overwhelmingly **postpositional**. Complements precede the adpositional head:
 >    * *Hindi:* *कमरे में* (*kamre mẽ* — "room in").
 > 3. **Noun Phrase Architecture (Greenberg Universal 2):** Genitive possessors, determiners, and adjectives systematically precede the governing head noun:
