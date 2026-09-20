@@ -1115,12 +1115,12 @@ Demonstratives carry rigid morphosyntactic features for **Number** (Singular vs.
 > * **The Linear Rule Prediction:**
 >   * If the rule were: *"To form a question, move the first auxiliary verb to the front of the sentence"*:
 >   * Moving auxiliary $\text{is}_1$ yields:
->     *\*$\mathbf{Is}_1 \text{ the boy who singing } \mathbf{is}_2 \text{ my brother?}$
+>     * \* $\mathbf{Is}_1 \text{ the boy who singing } \mathbf{is}_2 \text{ my brother?}$
 >   * *Result:* Strictly ungrammatical, yet children never make this error during language acquisition.
 > * **The Structure-Dependent Rule Reality:**
 >   * The actual rule is: *"Move the auxiliary verb that is the head of the matrix clause (the one dominated directly by the root IP/TP node) to the sentence-initial Complementizer (C) position."*
 >   * Applying the structural rule moves $\text{is}_2$:
->     *✔$\mathbf{Is}_2 \text{ [the boy [who is}_1 \text{ singing]] } \text{\_\_}_2 \text{ my brother?}$
+>     * ✔ $\mathbf{Is}_2 \text{ [the boy [who is}_1 \text{ singing]] } \text{\_\_}_2 \text{ my brother?}$
 >   * *Result:* Perfectly grammatical.
 >
 > **Significance:** This empirical fact proves that the human language faculty does not compute sequences as linear bead-strings; it constructs and manipulates hierarchical phrase-structure trees where depth of embedding overrides surface linear order.
@@ -1457,19 +1457,19 @@ HEAD-INITIAL / VO HARMONY (e.g., English, Arabic)
   * A structurally defined node in phrase structure that triggers agreement with the finite verb, receives nominative case, and satisfies the Extended Projection Principle (EPP).
 * **The Structural Dissociation (Topic $\neq$ Subject):**
   * *Overlap:* In neutral English sentences, the subject and topic often coincide:
-    * *"[The children]$_{\text{Subj/Topic}}$ are playing in the garden."*
+    * *"[The children]<sub>Subj/Topic</sub> are playing in the garden."*
   * *Divergence:* The topic does not have to be the grammatical subject:
-    * *"[The old house]$_{\text{Topic}}$, [I]$_{\text{Subj}}$ really like __."* (Direct object fronted as Topic).
-    * *"[Regarding the exam]$_{\text{Topic}}$, [the students]$_{\text{Subj}}$ are worried."* (Prepositional discourse frame as Topic).
-    * *"[My sister]$_{\text{Topic}}$, [she]$_{\text{Subj}}$ works in Pune."* (Left-dislocation: noun phrase sets the topic; pronoun acts as grammatical subject).
+    * *"[The old house]<sub>Topic</sub>, [I]<sub>Subj</sub> really like __."* (Direct object fronted as Topic).
+    * *"[Regarding the exam]<sub>Topic</sub>, [the students]<sub>Subj</sub> are worried."* (Prepositional discourse frame as Topic).
+    * *"[My sister]<sub>Topic</sub>, [she]<sub>Subj</sub> works in Pune."* (Left-dislocation: noun phrase sets the topic; pronoun acts as grammatical subject).
 
 #### B. What is Focus?
 
 * **Focus:** The constituent that contributes the most informative, prominent, contrastive, or unpredictable content relative to the current **Question Under Discussion (QUD)**.
 * **Focus vs. New Information:** While focus frequently introduces brand-new information, it is not identical to "new information":
   * **Informational Focus (Answers a Wh-Question):**
-    * Q: *"Who called?"* $\to$ A: *"**[ANITA]$_{\text{Focus}}$** called."*
-    * Q: *"What did Anita buy?"* $\to$ A: *"Anita bought **[A BOOK]$_{\text{Focus}}$**."*
+    * Q: *"Who called?"* $\to$ A: *"**[ANITA]<sub>Focus</sub>** called."*
+    * Q: *"What did Anita buy?"* $\to$ A: *"Anita bought **[A BOOK]<sub>Focus</sub>**."*
   * **Contrastive / Corrective Focus (Operating on Given Information):**
     * Highlights an alternative among previously established discourse entities:
     * *"I said **MONDAY**, not **TUESDAY**."*
@@ -1964,7 +1964,7 @@ Commit these exact sets of data and examples to memory before tomorrow morning:
 * **VOS:** 1.8% (25 languages) $\to$ Malagasy, Nias
 * **OVS:** 0.8% (11 languages) $\to$ Hixkaryana
 * **OSV:** 0.3% (4 languages) $\to$ Warao, Nadëb, Wik Ngathana, Tobati
-* *$S > O$ Subject Precedence:* Present in **83.4%** of the world's languages.
+* $S > O$ *Subject Precedence:* Present in **83.4%** of the world's languages.
 
 #### 2. Three Reusable Hindi Examples (Works Across 5 Different Topics)
 

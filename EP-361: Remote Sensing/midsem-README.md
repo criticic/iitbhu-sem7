@@ -9,7 +9,7 @@
 1. [Part 1: Fundamentals of Remote Sensing, EM Spectrum & Atmospheric Interactions](#part-1)
 2. [Part 2: Electromagnetic Wave Propagation in Lossy Media, Polarization & Degree of Coherence](#part-2)
 3. [Part 3: Blackbody Radiation Laws, Molecular Energy Transitions & Spectral Line Broadening](#part-3)
-4. [Part 4: Atmospheric Gas Absorption ($O_2$ & $H_2O$), Opacity & Transmissivity](#part-4)
+4. [Part 4: Atmospheric Gas Absorption, Opacity & Transmissivity](#part-4)
 5. [Part 5: Spectral Reflectance Curves & Microwave Dielectric Properties of Natural Media](#part-5)
 6. [Part 6: Satellite Orbital Mechanics (Geostationary vs. Sun-Synchronous Orbits)](#part-6)
 
@@ -150,6 +150,7 @@ where $d = 2r$ is the particle diameter and $\lambda$ is the wavelength.
 1. **Rayleigh Scattering ($d \ll \lambda$):**
    * Occurs when particle diameters are significantly smaller than the radiation wavelength (typically air molecules such as $N_2$ and $O_2$, where $d \approx 10^{-4}\ \mu\text{m}$).
    * The scattering cross-section is inversely proportional to the fourth power of wavelength:
+
      $$\sigma_s \propto \frac{1}{\lambda^4} \quad (\text{Scattering} \propto \lambda^{-4})$$
    * In the real Earth atmosphere, taking into account particle distribution variations, this dependence is approximately $\propto \lambda^{-1.3 \pm 0.6}$.
    * *Consequence:* Shorter wavelengths (blue light) scatter nearly 4 to 5 times more intensely than longer visible wavelengths (red light), explaining the blue colour of the sky and causing severe atmospheric haze in optical satellite imagery.
@@ -157,6 +158,7 @@ where $d = 2r$ is the particle diameter and $\lambda$ is the wavelength.
    * Occurs when the size of particles is roughly equal to the wavelength of radiation ($0.1\lambda \le d \le 10\lambda$).
    * Typical scatterers include dust, smoke, pollen, and water droplets in the lower troposphere ($5 - 10\ \text{km}$).
    * Wavelength dependence is weaker:
+
      $$\text{Scattering} \propto \lambda^{-\alpha} \quad (0.5 \le \alpha \le 2)$$
    * Affects optical and near-IR channels during overcast or dusty atmospheric conditions.
 3. **Non-Selective Scattering ($d \gg \lambda$):**
@@ -317,9 +319,9 @@ Here, the total current density consists of:
 
 Assuming time-harmonic fields with angular frequency $\omega$ in phasor notation:
 
-$$\vec{E}(\vec{r}, t) = \text{Re} \left\{ \vec{E}(\vec{r}) e^{j\omega t} \right\}$$
+$$\vec{E}(\vec{r}, t) = \text{Re} \left\\{ \vec{E}(\vec{r}) e^{j\omega t} \right\\}$$
 
-$$\vec{H}(\vec{r}, t) = \text{Re} \left\{ \vec{H}(\vec{r}) e^{j\omega t} \right\}$$
+$$\vec{H}(\vec{r}, t) = \text{Re} \left\\{ \vec{H}(\vec{r}) e^{j\omega t} \right\\}$$
 
 Replacing time derivatives $\dfrac{\partial}{\partial t} \to j\omega$, Maxwell's curl equations become:
 
@@ -372,7 +374,7 @@ $$E_x(z) = E_{x0} e^{-\gamma z} = E_{x0} e^{-(\alpha + j\beta)z} = E_{x0} e^{-\a
 
 Converting to the instantaneous time domain:
 
-$$\mathcal{E}_x(z, t) = \text{Re} \left\{ E_x(z) e^{j\omega t} \right\} = \text{Re} \left\{ E_{x0} e^{-\alpha z} e^{-j(\beta z - \omega t)} \right\}$$
+$$\mathcal{E}_x(z, t) = \text{Re} \left\\{ E_x(z) e^{j\omega t} \right\\} = \text{Re} \left\\{ E_{x0} e^{-\alpha z} e^{-j(\beta z - \omega t)} \right\\}$$
 
 $$\mathcal{E}_x(z, t) = \underbrace{E_{x0} e^{-\alpha z}}_{\text{Decaying Amplitude}} \cos(\omega t - \beta z) \quad \text{--- (11)}$$
 
@@ -383,8 +385,10 @@ The three key propagation parameters are:
 * **Attenuation Constant ($\alpha$):** Represents the rate of exponential decay per unit distance. Measured in **Nepers/meter** ($1\ \text{Np} \approx 8.686\ \text{dB}$).
 * **Phase Constant ($\beta$):** Represents the phase shift per unit distance ($\beta = 2\pi/\lambda$).
 * **Skin Depth ($\delta$):** The distance over which the amplitude of the field decays to $1/e$ ($\approx 36.8\%$) of its initial value at the boundary:
+
   $$\delta = \frac{1}{\alpha} \quad \text{--- (12)}$$
 * **Depth of Penetration for Power ($\delta_p$):** Since power is proportional to $|E|^2 \propto e^{-2\alpha z}$, the power absorption coefficient is $k_a = 2\alpha$. The depth of penetration $\delta_p$ is defined as the distance where power falls to $1/e$:
+
   $$\delta_p = \frac{1}{k_a} = \frac{1}{2\alpha} = \frac{\delta}{2} \quad \text{--- (13)}$$
 
 ---
@@ -514,21 +518,26 @@ where $\delta = \phi_y - \phi_x$ is the relative phase difference between the or
 
 1. **Linear Polarization:**
    * **Condition:** Phase difference $\delta = 0$ or $\pm \pi$, or one component is zero ($E_{x0} = 0$ or $E_{y0} = 0$).
-   * The vector $\vec{E}$ traces a straight line in the $x$-$y$ plane:
+   * The vector $\vec{E}$ traces a straight line in the $x\text{-}y$ plane:
+
      $$\frac{E_y}{E_x} = \pm \frac{E_{y0}}{E_{x0}} = \text{constant}$$
    * If $E_{y0} = E_{x0}$ and $\delta = 0$, the wave is linearly polarized at $45^\circ$ to the $x$-axis.
 2. **Circular Polarization:**
    * **Condition:** Magnitudes are equal ($E_{x0} = E_{y0} = E_0$) **and** the phase difference is $\delta = \pm \dfrac{\pi}{2} = \pm 90^\circ$.
    * Evaluating at $z = 0$:
+
      $$E_x(t) = E_0 \cos(\omega t)$$
+
      $$E_y(t) = E_0 \cos\left(\omega t \pm \frac{\pi}{2}\right) = \mp E_0 \sin(\omega t)$$
    * Squaring and adding:
+
      $$E_x^2(t) + E_y^2(t) = E_0^2 \quad (\text{Equation of a Circle})$$
    * **Right-Hand Circular Polarization (RHCP):** $\delta = -\dfrac{\pi}{2}$. As time increases, $\vec{E}$ rotates counter-clockwise when viewed looking into the oncoming wave.
    * **Left-Hand Circular Polarization (LHCP):** $\delta = +\dfrac{\pi}{2}$. $\vec{E}$ rotates clockwise.
 3. **Elliptical Polarization:**
    * **Condition:** Arbitrary amplitudes ($E_{x0} \neq E_{y0}$) and arbitrary phase difference ($\delta \neq 0, \pm \pi, \pm \pi/2$).
    * Combining components eliminates $t$, yielding the general ellipse equation:
+
      $$\left(\frac{E_x}{E_{x0}}\right)^2 + \left(\frac{E_y}{E_{y0}}\right)^2 - 2\left(\frac{E_x}{E_{x0}}\right)\left(\frac{E_y}{E_{y0}}\right)\cos\delta = \sin^2\delta$$
 
 ---
@@ -553,13 +562,17 @@ $$0 \le \rho(x, y) \le 1$$
 
 1. **Completely Coherent / Fully Polarized Wave ($\rho = 1$):**
    * Constant amplitude ratio and deterministic phase difference:
+
      $$E_x(z) = \hat{x} E_{x0} e^{-j\beta z}, \quad E_y(z) = \hat{y} E_{y0} e^{-j\beta z + j\theta}$$
    * The cross-product gives:
+
      $$\left| \langle E_x E_y^* \rangle \right| = \left| E_{x0} E_{y0}^* e^{-j\theta} \right| = |E_{x0}| |E_{y0}|$$
    * The denominator is $\left[ |E_{x0}|^2 |E_{y0}|^2 \right]^{1/2} = |E_{x0}| |E_{y0}|$. Therefore:
+
      $$\rho(x, y) = \frac{|E_{x0}| |E_{y0}|}{|E_{x0}| |E_{y0}|} = 1$$
 2. **Completely Incoherent / Unpolarized Wave ($\rho = 0$):**
    * The phases $\theta_x(t)$ and $\theta_y(t)$ are completely random, independent variables uniformly distributed on $[-\pi, \pi]$:
+
      $$\langle E_x(t) E_y^*(t) \rangle = \langle E_{x0}(t) \rangle \langle E_{y0}(t) \rangle \langle e^{j\theta_x} \rangle \langle e^{-j\theta_y} \rangle = 0$$
    * Therefore $\rho(x, y) = 0$.
 3. **Partially Polarized Wave ($0 < \rho < 1$):** Represents natural waves that have undergone scattering by rain, forests, or rough ground. A fraction of the energy remains coherent while the rest is depolarized.
@@ -596,32 +609,41 @@ $$P = \frac{\text{Polarized Power}}{\text{Total Power}} = \frac{\sqrt{Q^2 + U^2 
 >
 > **Part 1: Proof of Exponential Amplitude Decay**
 > Starting from Maxwell's curl equations for a source-free lossy medium with parameters $(\mu, \epsilon, \sigma)$:
+>
 > $$\nabla \times \vec{E} = -j\omega\mu \vec{H}$$
+>
 > $$\nabla \times \vec{H} = (\sigma + j\omega\epsilon) \vec{E}$$
 >
 > Taking the curl of Faraday's Law and applying $\nabla \cdot \vec{E} = 0$:
+>
 > $$\nabla \times (\nabla \times \vec{E}) = \nabla(\nabla \cdot \vec{E}) - \nabla^2\vec{E} = -j\omega\mu (\sigma + j\omega\epsilon)\vec{E}$$
+>
 > $$\nabla^2 \vec{E} - \gamma^2 \vec{E} = 0$$
 > where $\gamma = \alpha + j\beta = \sqrt{j\omega\mu(\sigma + j\omega\epsilon)}$.
 >
 > For a uniform plane wave polarized along $\hat{x}$ and propagating along $+z$:
+>
 > $$\frac{d^2 E_x(z)}{dz^2} - \gamma^2 E_x(z) = 0$$
 >
 > The forward solution is $E_x(z) = E_{x0} e^{-\gamma z} = E_{x0} e^{-\alpha z} e^{-j\beta z}$. Converting to the real instantaneous time-domain:
-> $$\mathcal{E}_x(z, t) = \text{Re}\left\{ E_x(z) e^{j\omega t} \right\} = E_{x0} e^{-\alpha z} \cos(\omega t - \beta z)$$
+>
+> $$\mathcal{E}_x(z, t) = \text{Re}\left\\{ E_x(z) e^{j\omega t} \right\\} = E_{x0} e^{-\alpha z} \cos(\omega t - \beta z)$$
 >
 > The factor $e^{-\alpha z}$ proves that the wave amplitude decays **exponentially with distance** $z$, with $\alpha$ representing the attenuation constant.
 >
 > **Part 2: Loss Tangent & Classification of Media**
 > The **loss tangent** is the ratio of conduction current density magnitude to displacement current density magnitude:
+>
 > $$\tan\delta = \frac{|\vec{J}_c|}{|\vec{J}_d|} = \frac{\sigma |\vec{E}|}{\omega\epsilon |\vec{E}|} = \frac{\sigma}{\omega\epsilon} = \frac{\epsilon''}{\epsilon'}$$
 >
 > Media are classified based on the value of $\tan\delta$:
 >
 > 1. **Good / Low-Loss Dielectric ($\frac{\sigma}{\omega\epsilon} \ll 1$, $\tan\delta \ll 1$):** Conduction current is negligible ($J_c \ll J_d$). Using the binomial approximation on $\gamma = j\omega\sqrt{\mu\epsilon}\left(1 - j\frac{\sigma}{\omega\epsilon}\right)^{1/2}$:
+>
 >    $$\alpha \approx \frac{\sigma}{2}\sqrt{\frac{\mu}{\epsilon}} = \frac{\eta \sigma}{2}, \quad \beta \approx \omega\sqrt{\mu\epsilon}$$
 >    Attenuation is small and nearly frequency-independent; waves propagate deep into the material (e.g., dry soil, pure ice).
 > 2. **Good Conductor ($\frac{\sigma}{\omega\epsilon} \gg 1$, $\tan\delta \gg 1$):** Conduction current dominates ($J_c \gg J_d$).
+>
 >    $$\gamma \approx \sqrt{j\omega\mu\sigma} = (1+j)\sqrt{\frac{\omega\mu\sigma}{2}}, \qquad \alpha = \beta = \sqrt{\frac{\omega\mu\sigma}{2}} = \sqrt{\pi f \mu \sigma}$$
 >    The skin depth is very small: $\delta = \frac{1}{\alpha} = \sqrt{\frac{2}{\omega\mu\sigma}}$. Waves attenuate rapidly within thin surface layers (e.g., metals, ocean saltwater).
 
@@ -655,6 +677,7 @@ $$P = \frac{\text{Polarized Power}}{\text{Total Power}} = \frac{\sqrt{Q^2 + U^2 
 > Polarization describes the time-dependent locus traced by the tip of the electric field vector $\vec{E}$ at a fixed point in space within a plane orthogonal to the propagation vector.
 >
 > For a plane wave propagating in the $+z$-direction:
+>
 > $$\vec{E}(z, t) = \hat{x} E_{x0} \cos(\omega t - \beta z) + \hat{y} E_{y0} \cos(\omega t - \beta z + \delta)$$
 > where $\delta = \phi_y - \phi_x$ is the relative phase shift.
 >
@@ -668,12 +691,17 @@ $$P = \frac{\text{Polarized Power}}{\text{Total Power}} = \frac{\sqrt{Q^2 + U^2 
 > Natural radiation is rarely pure; it typically consists of an unpolarized incoherent background combined with a polarized coherent component.
 >
 > To measure the **Degree of Polarization ($P$)**, the wave field is characterized using the four **Stokes Parameters** $(I, Q, U, V)$:
+>
 > $$I = \langle |E_x|^2 \rangle + \langle |E_y|^2 \rangle \quad (\text{Total intensity})$$
+>
 > $$Q = \langle |E_x|^2 \rangle - \langle |E_y|^2 \rangle \quad (\text{Horizontal vs. vertical preference})$$
+>
 > $$U = 2\text{Re}\langle E_x E_y^* \rangle \quad (+45^\circ \text{ vs. } -45^\circ \text{ linear preference})$$
+>
 > $$V = 2\text{Im}\langle E_x E_y^* \rangle \quad (\text{Right- vs. left-handed circular preference})$$
 >
 > The Degree of Polarization ($P$) is the ratio of polarized power to total power:
+>
 > $$P = \frac{I_{\text{pol}}}{I_{\text{total}}} = \frac{\sqrt{Q^2 + U^2 + V^2}}{I}$$
 >
 > Evaluation:
@@ -683,6 +711,7 @@ $$P = \frac{\text{Polarized Power}}{\text{Total Power}} = \frac{\sqrt{Q^2 + U^2 
 > * $0 < P < 1$: Partially polarized wave (measured by decomposing total power into $I = I_{\text{unpol}} + I_{\text{pol}}$).
 >
 > Alternatively, using the cross-correlation coefficient $\rho$ when both orthogonal channels have equal intensity:
+>
 > $$P = \rho(x, y) = \frac{|\langle E_x E_y^* \rangle|}{\sqrt{\langle |E_x|^2 \rangle \langle |E_y|^2 \rangle}}$$
 
 ---
@@ -706,11 +735,14 @@ A **blackbody** is an idealized physical body that **absorbs $100\%$ of all inci
 Classical electromagnetic theory treated the radiation inside a cavity as a collection of standing electromagnetic waves.
 
 * By the **Equipartition Theorem**, each standing mode possesses an average kinetic/thermal energy of:
+
   $$\langle E \rangle = k_B T$$
   where $k_B = 1.381 \times 10^{-23}\ \text{J/K}$ is Boltzmann's constant.
 * Multiplying the modal density per unit frequency interval $N(f) = \dfrac{8\pi f^2}{c^3}$ by $\langle E \rangle$ gave the **Rayleigh-Jeans Spectral Energy Density**:
+
   $$\rho(f)\, df = \frac{8\pi f^2}{c^3} k_B T\, df$$
   Or, expressing spectral radiance in terms of wavelength $\lambda$ ($f = c/\lambda$, $|df| = \dfrac{c}{\lambda^2}\, d\lambda$):
+
   $$B_\lambda(T) = \frac{2 c k_B T}{\lambda^4}$$
 
 ```
@@ -732,8 +764,10 @@ Spectral Radiance B_λ
 #### C. The Ultraviolet Catastrophe
 
 * As frequency $f \to \infty$ (or $\lambda \to 0$ in the ultraviolet and beyond), the predicted energy density grows without bound:
+
   $$\lim_{f \to \infty} \rho(f) \propto f^2 \to \infty$$
 * Integrating across all frequencies yields an **infinite total radiated energy density**:
+
   $$U_{\text{total}} = \int_0^\infty \rho(f)\, df = \infty$$
 * This non-physical result contradicted experimental blackbody curves, which exhibited a distinct peak followed by an exponential drop-off at higher frequencies.
 
@@ -895,16 +929,19 @@ Absorption
 
 1. **Natural Broadening:**
    * Arises from the Heisenberg uncertainty principle ($\Delta E \cdot \Delta t \ge \hbar/2$). Because the excited state has a finite radiative lifetime $\tau$ ($\Delta t \approx \tau$), the energy level has an intrinsic width:
+
      $$\Delta f_{\text{nat}} = \frac{1}{2\pi\tau} \approx 10 - 100\ \text{Hz}$$
    * Negligible in atmospheric remote sensing compared to other mechanisms.
 2. **Doppler Broadening (Thermal Motion):**
    * Caused by the Maxwellian thermal velocity distribution of molecules moving relative to the incident electromagnetic wave.
    * Dominates in the upper atmosphere (mesosphere and thermosphere, altitude $> 60\ \text{km}$), where gas pressure is low.
    * Produces a **Gaussian line shape**:
+
      $$F_D(f) \propto \exp\left[ -\left(\frac{f - f_0}{\Delta f_D}\right)^2 \ln 2 \right]$$
 3. **Pressure / Collisional Broadening:**
    * Arises when radiating or absorbing molecules collide with other gas molecules, perturbing their electronic and rotational energy states and shortening the effective lifetime of the coherent wave train.
    * The collision frequency is directly proportional to gas density and pressure $P$:
+
      $$\gamma \propto P \cdot T^{-n} \quad (n \approx 0.5 - 0.9)$$
    * **Dominates in the lower atmosphere (troposphere and stratosphere, $0 - 50\ \text{km}$)** and dictates microwave attenuation profiles.
 
@@ -986,15 +1023,18 @@ Line Shape F(f)
 > * **Conceptual Basis:** Classical electromagnetic thermodynamics treats a cavity as a continuum of standing waves (modes) whose walls contain harmonic oscillators that emit and absorb energy continuously.
 > * **Equipartition Theorem:** By classical equipartition, every independent vibrational mode has an average thermal energy of $\langle E \rangle = k_B T$, irrespective of frequency.
 > * **Derivation:** Combining the density of standing waves per unit frequency in a 3D enclosure $N(f)\,df = \frac{8\pi f^2}{c^3}\,df$ with the average energy:
+>
 >   $$\rho(f)\,df = N(f) \langle E \rangle\, df = \frac{8\pi f^2}{c^3} k_B T\, df$$
-> * **Failure (Ultraviolet Catastrophe):** Because $\rho(f) \propto f^2$, as frequency increases into the ultraviolet ($f \to \infty$), the predicted energy density diverges to infinity ($\int_0^\infty \rho(f)\,df = \infty$). This contradicts finite experimental measurements.
+> * **Failure (Ultraviolet Catastrophe):** Because $\rho(f) \propto f^2$, as frequency increases into the ultraviolet ($f \to \infty$), the predicted energy density diverges to infinity $\int_0^\infty \rho(f)\,df = \infty$. This contradicts finite experimental measurements.
 >
 > **2. Quantum Theory (Planck Formulation):**
 >
 > * **Conceptual Basis:** Max Planck resolved this failure by postulating that matter and radiation exchange energy only in discrete, quantized units: $E = n h f \quad (n = 0, 1, 2, \dots)$.
 > * **Derivation:** Using the Maxwell-Boltzmann statistical distribution, the average energy per mode is given by:
+>
 >   $$\langle E \rangle = \frac{\sum_{n=0}^\infty n h f\, e^{-nhf/k_B T}}{\sum_{n=0}^\infty e^{-nhf/k_B T}} = \frac{hf}{e^{\frac{hf}{k_B T}} - 1}$$
 > * Multiplying by the modal density yields **Planck's Law**:
+>
 >   $$\rho(f)\,df = \frac{8\pi h f^3}{c^3} \frac{1}{e^{\frac{hf}{k_B T}} - 1}\,df$$
 > * **Physical Resolution:** At high frequencies ($hf \gg k_B T$), the probability of exciting a quantum state is suppressed by the exponential factor $e^{-hf/k_B T}$. This drives $\rho(f) \to 0$ as $f \to \infty$, avoiding the catastrophe and matching real blackbody spectra.
 
@@ -1007,15 +1047,20 @@ Line Shape F(f)
 > **Answer:**
 >
 > * **Quantum Mechanical Approach:** Planck abandoned the continuous-energy assumption, proposing that radiation inside an isothermal cavity is emitted and absorbed by microscopic atomic oscillators with quantized energies:
->   $$\mathcal{E}_n = n h f, \quad n \in \{0, 1, 2, \dots\}$$
+>
+>   $$\mathcal{E}_n = n h f, \quad n \in \\{0, 1, 2, \dots\\}$$
 >   The probability $P(n)$ of an oscillator being in the $n$-th state is governed by the Boltzmann factor:
+>
 >   $$P(n) = \frac{e^{-nhf/k_B T}}{\sum_{m=0}^\infty e^{-mhf/k_B T}}$$
 >   Evaluating the expectation value: $\langle \mathcal{E} \rangle = \dfrac{hf}{e^{hf/k_B T} - 1}$. Multiplying by the spatial mode density $g(f) = \dfrac{8\pi f^2}{c^3}$ produces the spectral energy density:
+>
 >   $$\rho(f) = \frac{8\pi h f^3}{c^3} \left( \frac{1}{e^{hf/k_B T} - 1} \right)$$
 >
 > * **Why a Blackbody Cannot Attain Infinite Energy Density:** In classical physics, high-frequency modes carry the same energy ($k_B T$) as low-frequency modes, causing the total energy to diverge. In quantum theory, radiating a high-frequency photon requires a large energy packet ($\Delta E = hf$). If $hf \gg k_B T$, the thermal energy in the system is insufficient to populate those states, and the Boltzmann factor drops off exponentially:
+>
 >   $$\lim_{f \to \infty} \left(\frac{1}{e^{hf/k_B T} - 1}\right) \approx e^{-hf/k_B T} \to 0$$
 >   The exponential term decays faster than the polynomial $f^3$ grows: $\lim_{f \to \infty} \rho(f) \propto f^3 e^{-hf/k_B T} = 0$. Integrating across all frequencies yields a finite value given by the Stefan-Boltzmann law:
+>
 >   $$U = \int_0^\infty \rho(f)\, df = a T^4 < \infty$$
 >   This prevents infinite energy density.
 
@@ -1028,23 +1073,29 @@ Line Shape F(f)
 > **Answer:**
 >
 > Planck's spectral radiance formula expressed per unit wavelength is:
+>
 > $$B_\lambda(T) = \frac{2 h c^2}{\lambda^5 \left( e^{\frac{hc}{\lambda k_B T}} - 1 \right)}$$
 >
 > To find the wavelength $\lambda_{\max}$ at which emission is maximized, differentiate $B_\lambda(T)$ with respect to $\lambda$ and equate to zero:
+>
 > $$\left. \frac{\partial B_\lambda(T)}{\partial \lambda} \right|_{\lambda = \lambda_{\max}} = 0$$
 >
 > $$\frac{d}{d\lambda}\left[ 2hc^2 \lambda^{-5} \left(e^{\frac{hc}{\lambda k_B T}} - 1\right)^{-1} \right] = 2hc^2 \left[ -5\lambda^{-6}\left(e^{\frac{hc}{\lambda k_B T}} - 1\right)^{-1} + \lambda^{-5}(-1)\left(e^{\frac{hc}{\lambda k_B T}} - 1\right)^{-2} e^{\frac{hc}{\lambda k_B T}}\left(-\frac{hc}{k_B T \lambda^2}\right) \right] = 0$$
 >
 > Dividing by $2hc^2 \lambda^{-6} \left(e^{\frac{hc}{\lambda k_B T}} - 1\right)^{-2}$:
+>
 > $$-5\left(e^{\frac{hc}{\lambda k_B T}} - 1\right) + \left(\frac{hc}{\lambda k_B T}\right) e^{\frac{hc}{\lambda k_B T}} = 0$$
 >
 > Define the dimensionless variable $x = \dfrac{hc}{\lambda k_B T}$:
+>
 > $$x e^x - 5(e^x - 1) = 0 \implies \frac{x}{1 - e^{-x}} = 5 \implies x = 5(1 - e^{-x})$$
 >
 > Solving numerically yields $x \approx 4.965114$. Substituting back $x = \dfrac{hc}{\lambda_{\max} k_B T}$:
+>
 > $$\frac{hc}{\lambda_{\max} k_B T} = 4.965114 \implies \lambda_{\max} T = \frac{hc}{4.965114 \cdot k_B} = b$$
 >
 > Substituting physical constants:
+>
 > $$\lambda_{\max} T = \frac{(6.626 \times 10^{-34}\ \text{J s})(3 \times 10^8\ \text{m/s})}{4.965114 \times (1.381 \times 10^{-23}\ \text{J/K})} \approx 2.898 \times 10^{-3}\ \text{m}\cdot\text{K} \approx 2898\ \mu\text{m}\cdot\text{K}$$
 > This confirms Wien's Displacement Law.
 
@@ -1067,17 +1118,21 @@ Line Shape F(f)
 > Atmospheric line shapes are parameterized by their half-width at half-maximum ($\gamma$):
 >
 > 1. **Lorentzian Function:**
+>
 >    $$F_L(f, f_0) = \frac{1}{\pi} \left[ \frac{\gamma}{(f_0 - f)^2 + \gamma^2} \right]$$
 >    * *Applicability:* Valid only for optical frequencies or when the line width is much smaller than the transition frequency ($\gamma \ll f_0$).
 >    * *Limitation:* Fails at higher atmospheric pressures in the microwave range; overestimates absorption in the line wings because it ignores collisions that occur during the phase interaction.
 > 2. **Van Vleck-Weisskopf (VVW) Function:**
+>
 >    $$F_{\text{VW}}(f, f_0) = \frac{1}{\pi} \left(\frac{f}{f_0}\right) \left[ \frac{\gamma}{(f_0 - f)^2 + \gamma^2} + \frac{\gamma}{(f_0 + f)^2 + \gamma^2} \right]$$
 >    * *Applicability:* Designed specifically for the **microwave spectrum** ($1 - 300\ \text{GHz}$) under atmospheric pressure conditions where $\gamma \approx f_0$. It correctly accounts for zero-frequency asymptotic limits.
 >    * *Limitation:* Overestimates absorption in the infrared window wings (e.g., at $10\ \mu\text{m}$, VVW gives $\approx 20\ \text{dB/km}$ versus observed values under $1\ \text{dB/km}$).
 > 3. **Gross Function (Zhevakin-Naumov):**
+>
 >    $$F_G(f, f_0) = \frac{1}{\pi} \left[ \frac{4 f f_0 \gamma}{(f_0^2 - f^2)^2 + 4 f^2 \gamma^2} \right]$$
 >    * *Applicability:* Performs consistently from the millimetre-wave into the thermal infrared spectrum.
 >    * *Comparison:* Near line resonance ($f = f_0$), all three functions yield the same peak value:
+>
 >      $$F_L = F_{\text{VW}} = F_G = \frac{1}{\pi \gamma}$$
 >      In the far-infrared window region ($10\ \mu\text{m}$), the Gross function yields attenuation values ($\approx 0.55\ \text{dB/km}$) that match empirical measurements much more closely than VVW.
 
@@ -1092,12 +1147,15 @@ Line Shape F(f)
 > In the microwave region, pressure (collisional) broadening dominates. The absorption profile is given by $k_a(f) = \frac{4\pi f}{c} S F(f, f_0)$, where $F(f, f_0)$ describes the distribution.
 >
 > 1. **Lorentzian Line Shape:**
+>
 >    $$F_L(f, f_0) = \frac{1}{\pi} \frac{\gamma}{(f_0 - f)^2 + \gamma^2}$$
 >    Derived assuming instantaneous elastic impacts. It is symmetric about $f_0$. Because it does not account for the negative-frequency resonance term, it is physically inaccurate when $\gamma$ is on the order of $f_0$, which occurs commonly in microwave atmospheric propagation.
 > 2. **Van Vleck-Weisskopf (VVW) Shape:**
+>
 >    $$F_{\text{VW}}(f, f_0) = \frac{1}{\pi}\left(\frac{f}{f_0}\right) \left[ \frac{\gamma}{(f_0 - f)^2 + \gamma^2} + \frac{\gamma}{(f_0 + f)^2 + \gamma^2} \right]$$
 >    Derived from statistical mechanics by assuming dipoles relax toward instantaneous thermal equilibrium after collisions. The pre-factor $(f/f_0)$ and the second counter-rotating term enforce the correct behaviour as $f \to 0$. This is the standard function used for microwave lines like $H_2O$ ($22.235\ \text{GHz}$) and $O_2$ ($60\ \text{GHz}$).
 > 3. **Gross (Zhevakin-Naumov) Shape:**
+>
 >    $$F_G(f, f_0) = \frac{4}{\pi} \frac{f f_0 \gamma}{(f_0^2 - f^2)^2 + 4 f^2 \gamma^2}$$
 >    Derived from kinetic collision models. At line centre ($f = f_0$), it matches the other two formulations: $F_G(f_0, f_0) = \dfrac{1}{\pi \gamma}$. It attenuates faster in the wings, making it better suited for bridging the millimetre-wave and infrared regions.
 
@@ -1193,6 +1251,7 @@ $$\rho_v(z) = \rho_0 \exp\left(-\frac{z}{H_4}\right) \quad [\text{g/m}^3]$$
 * Scale height $H_4 \approx 2 - 2.5\ \text{km}$.
 * Surface humidity $\rho_0$ varies from $10^{-2}\ \text{g/m}^3$ in cold, dry arctic regimes to $> 30\ \text{g/m}^3$ in humid equatorial regions.
 * The integrated precipitable water vapour per unit column area $M_v$ is:
+
   $$M_v = \int_0^\infty \rho_v(z)\, dz = \rho_0 H_4 \quad [\text{kg/m}^2]$$
 
 ---
@@ -1220,16 +1279,21 @@ Absorption Coefficient k_H2O (dB/km)
    * Multiple dense resonance lines appear above $300\ \text{GHz}$ into the sub-millimetre regime.
 2. **Total Absorption Coefficient Formulation:**
    In microwave remote sensing below $100\ \text{GHz}$, the total water vapour attenuation coefficient $k_{\text{H}_2\text{O}}(f)$ is modelled as the sum of the primary resonance line at $22.2\ \text{GHz}$ and an empirical residual correction term representing the cumulative far wings of all higher-frequency lines ($> 100\ \text{GHz}$):
+
    $$k_{\text{H}_2\text{O}}(f) = k(f, 22.2) + k_r(f) \quad [\text{dB/km}]$$
    * **Resonant Contribution ($22.2\ \text{GHz}$):**
+
      $$k(f, 22.2) = 2 f^2 \rho_v \left(\frac{300}{T}\right)^{5/2} \exp\left(-\frac{644}{T}\right) \left[ \frac{\gamma_l}{(494.4 - f^2)^2 + 4 f^2 \gamma_l^2} \right] \quad [\text{dB/km}]$$
    * **Residual Wing Contribution ($k_r$):**
+
      $$k_r(f) = 2.4 \times 10^{-6} f^2 \rho_v \left(\frac{300}{T}\right)^{3/2} \gamma_l \quad [\text{dB/km}]$$
      where $\gamma_l$ is the pressure-broadened line-width parameter.
 3. **Extension from $100$ to $300\ \text{GHz}$:**
    At higher frequencies, the 10 lowest rotational transitions must be explicitly summed using the Gross/VVW line shape:
+
    $$k_{\text{H}_2\text{O}}(f) = 2 f^2 \rho_v \left(\frac{300}{T}\right)^{5/2} \sum_{i=1}^{10} A_i \exp\left(-\frac{\mathcal{E}_i}{T}\right) \left[ \frac{\gamma_i}{(f_i^2 - f^2)^2 + 4 f^2 \gamma_i^2} \right] + \Delta k(f)$$
    with the empirical correction term:
+
    $$\Delta k(f) = 4.69 \times 10^{-6} \rho_v \left(\frac{300}{T}\right)^{2.1} \left(\frac{P}{1000}\right) f^2 \quad [\text{dB/km}]$$
 
 ---
@@ -1256,12 +1320,15 @@ Absorption Coefficient k_O2 (dB/km)
    * **$60\ \text{GHz}$ Absorption Complex ($50 - 70\ \text{GHz}$):** Comprises **39 individual fine-structure rotational transitions**. At high altitudes ($> 30\ \text{km}$, low pressure), these transitions resolve into distinct, sharp lines. At lower altitudes (troposphere), pressure broadening blends all 39 transitions into a single broad absorption band peaking near $60\ \text{GHz}$ ($k \approx 15\ \text{dB/km}$).
    * **$118.75\ \text{GHz}$ Isolated Resonance:** A single rotational transition that provides an alternative sounding window for atmospheric temperature profiling.
 2. **Mathematical Model for Oxygen Attenuation:**
+
    $$k_{\text{O}_2}(f) = 1.61 \times 10^{-2} f^2 \left(\frac{P}{1013}\right) \left(\frac{300}{T}\right)^2 F' \quad [\text{dB/km}]$$
    where $F'$ represents the cumulative line strength and shape summation across the 39 rotational transitions.
 3. **Approximation Below $45\ \text{GHz}$ (Far-Wing Region):**
    Below $45\ \text{GHz}$, the absorption band can be modelled using a single effective resonance at $f_0 = 60\ \text{GHz}$:
+
    $$k_{\text{O}_2}(f) = 1.1 \times 10^{-2} f^2 \left(\frac{P}{1013}\right) \left(\frac{300}{T}\right)^2 \gamma \left[ \frac{1}{(f - f_0)^2 + \gamma^2} + \frac{1}{f^2 + \gamma^2} \right] \quad [\text{dB/km}]$$
    where the oxygen linewidth parameter $\gamma$ depends on total dry air pressure:
+
    $$\gamma = \gamma_0 \left(\frac{P}{1013}\right) \left(\frac{300}{T}\right)^{0.85} \quad [\text{GHz}]$$
    $$\gamma_0 = \begin{cases}
    0.59, & P \ge 333\ \text{mbar} \\
@@ -1381,6 +1448,7 @@ $$\Upsilon(f, \theta) = \exp(-\tau_\theta) = \exp\left(-\tau_0 \sec\theta\right)
 >
 > **Part 1: Atmospheric Opacity**
 > Atmospheric opacity (optical depth, $\tau$) is a dimensionless measure of the degree to which the atmosphere attenuates, absorbs, and scatters electromagnetic radiation along a propagation path. It represents the integrated volume extinction coefficient along that path:
+>
 > $$\tau = \int_{\text{Path}} k_e(s)\, ds$$
 > where $k_e(s) = k_a(s) + k_s(s)$ is the total extinction coefficient $(\text{Np/m})$.
 > * **Zenith Opacity ($\tau_0$):** The optical thickness measured along a vertical path perpendicular to the Earth's surface ($\theta = 0^\circ$): $\tau_0 = \int_0^\infty k_e(z)\, dz$.
@@ -1390,17 +1458,23 @@ $$\Upsilon(f, \theta) = \exp(-\tau_\theta) = \exp\left(-\tau_0 \sec\theta\right)
 > Consider an electromagnetic wave entering a plane-parallel, horizontally stratified atmosphere at a zenith angle $\theta$ relative to the surface normal.
 >
 > 1. **Path Geometry:** The incremental slant propagation path length $ds$ at altitude $z$ is related to the vertical height increment $dz$ by:
+>
 >    $$ds = \frac{dz}{\cos\theta} = dz \sec\theta$$
 > 2. **Differential Power Decay (Beer's Law):** The fractional decrease in radiant intensity $I$ across path $ds$ is:
+>
 >    $$\frac{dI}{I} = -k_e(z)\, ds = -k_e(z) \sec\theta\, dz$$
 > 3. **Integration Along the Slant Path:** Integrating from the ground ($z = 0$) to the top of the atmosphere ($z = \infty$):
+>
 >    $$\int_{I_0}^{I} \frac{dI}{I} = -\sec\theta \int_0^\infty k_e(z)\, dz \implies \ln\left(\frac{I}{I_0}\right) = -\sec\theta \cdot \tau_0$$
 >    where $\tau_0 = \int_0^\infty k_e(z)\, dz$ is the **Zenith Opacity**.
 > 4. **Atmospheric Transmissivity ($\Upsilon$):** The transmissivity $\Upsilon$ is the ratio of transmitted intensity $I$ to incident intensity $I_0$:
+>
 >    $$\Upsilon = \frac{I}{I_0} = \exp\left( -\tau_0 \sec\theta \right)$$
 >    In terms of the total atmospheric loss factor $L_\theta = e^{\tau_0 \sec\theta}$:
+>
 >    $$\Upsilon = \frac{1}{L_\theta} = \exp\left(-\tau_0 \sec\theta\right)$$
 >    In decibels:
+>
 >    $$\Upsilon(\text{dB}) = -10 \log_{10} L_\theta = -4.343 \cdot \tau_0(\text{Np}) \sec\theta = -\tau_0(\text{dB}) \sec\theta$$
 
 ---
@@ -1451,7 +1525,7 @@ The spectral response of healthy green vegetation is divided into three distinct
 #### A. Visible Region ($0.4 - 0.7\ \mu\text{m}$): Pigment Control
 
 * Dominated by photosynthetic pigments located within the chloroplasts of leaf palisade cells:
-  * **Chlorophyll-$a$ and Chlorophyll-$b$** absorb strongly in the **blue** ($\approx 0.45\ \mu\text{m}$) and **red** ($\approx 0.66\ \mu\text{m}$) wavelengths to drive photosynthesis.
+  * **$\text{Chlorophyll-}a$ and $\text{Chlorophyll-}b$** absorb strongly in the **blue** ($\approx 0.45\ \mu\text{m}$) and **red** ($\approx 0.66\ \mu\text{m}$) wavelengths to drive photosynthesis.
   * Very little absorption occurs in the green band ($\approx 0.55\ \mu\text{m}$), producing a localized reflectance peak ($\approx 10 - 15\%$), which makes healthy leaves appear green to the human eye.
 * In stressed, senescent, or diseased vegetation, chlorophyll production declines, red absorption decreases, and the leaf reflects more red light (the "red edge" flattens), making the plant appear yellow or brown.
 
@@ -1463,6 +1537,7 @@ The spectral response of healthy green vegetation is divided into three distinct
 * High refractive index mismatches between cell walls ($n \approx 1.52$) and intercellular air cavities ($n \approx 1.00$) cause intense internal refraction and multiple Fresnel reflections.
 * Healthy leaves reflect $40 - 50\%$ and transmit $40 - 50\%$ of incident NIR radiation.
 * *Remote Sensing Utility:* The contrast between low red reflectance and high NIR reflectance forms the basis for the **Normalized Difference Vegetation Index (NDVI)**:
+
   $$\text{NDVI} = \frac{\rho_{\text{NIR}} - \rho_{\text{Red}}}{\rho_{\text{NIR}} + \rho_{\text{Red}}}$$
   * Dense, healthy canopy: $\text{NDVI} \approx 0.6 - 0.9$
   * Bare soil: $\text{NDVI} \approx 0.1 - 0.2$
@@ -1472,6 +1547,7 @@ The spectral response of healthy green vegetation is divided into three distinct
 
 * Governed primarily by the absorption of liquid water held within leaf tissues.
 * **Dominant Water Absorption Bands:** Strong fundamental vibrational absorption dips occur at:
+
   $$\lambda = 1.4\ \mu\text{m}, \quad 1.9\ \mu\text{m}, \quad 2.7\ \mu\text{m}$$
 * Secondary, weaker water absorption bands occur near $0.96\ \mu\text{m}$ and $1.1\ \mu\text{m}$.
 * Reflectance peaks occur between these water bands (at $\sim 1.6\ \mu\text{m}$ and $\sim 2.2\ \mu\text{m}$). As leaf water content drops (e.g., due to drought stress), absorption dips become shallower and overall SWIR reflectance rises.
@@ -1518,8 +1594,10 @@ $$\epsilon^* = \epsilon_r = \epsilon_r' - j \epsilon_r''$$
 
 * **Real Permittivity ($\epsilon_r'$):** Quantifies the medium's capacity to store electrical energy via polar orientation and atomic displacement. It controls the phase velocity ($v_p = c/\sqrt{\epsilon_r'}$) and the Fresnel reflection coefficient at dielectric interfaces.
 * **Imaginary Permittivity / Loss Factor ($\epsilon_r''$):** Quantifies the dissipation and absorption of electromagnetic energy into heat via electrical conduction and dielectric relaxation damping:
+
   $$\epsilon_r'' = \epsilon_d'' + \frac{\sigma}{\omega \epsilon_0}$$
 * **Power Penetration Depth ($\delta_p$):** The distance over which microwave power attenuates to $1/e$ ($36.8\%$):
+
   $$\delta_p = \frac{\lambda_0 \sqrt{\epsilon_r'}}{2\pi \epsilon_r''} \quad (\text{for low-loss media, } \epsilon_r'' \ll \epsilon_r')$$
 
 ---
@@ -1563,12 +1641,15 @@ Permittivity
   * Water molecules are locked into a rigid crystalline lattice. Their relaxation frequency drops to the kilohertz regime ($f_0 \sim \text{kHz}$).
   * At microwave frequencies ($f \ge 1\ \text{GHz}$), $2\pi f \tau_i \gg 1$.
   * The Debye model simplifies to:
+
     $$\epsilon_i' \approx \epsilon_{i\infty} \approx 3.15 \quad (\text{Constant and lossless})$$
+
     $$\epsilon_i'' \approx \frac{\alpha_0}{f} + \beta_0 f \approx 10^{-4} - 10^{-3}$$
   * Pure ice is essentially transparent to microwaves, allowing radar signals to penetrate tens of metres into dry glaciers and ice sheets.
 * **Sea Ice (Heterogeneous Saline Mixture):**
   * Consists of pure ice crystals, entrapped air pockets, and concentrated liquid **brine inclusions** containing dissolved salts ($\text{NaCl}$).
   * Liquid brine has high ionic conductivity ($\sigma$), which drastically increases $\epsilon''$:
+
     $$\epsilon_{\text{sea-ice}}'' = \epsilon_d'' + \frac{\sigma_{\text{brine}}}{\omega \epsilon_0} \gg \epsilon_{\text{pure-ice}}''$$
   * Penetration depth in first-year sea ice is limited to just a few centimetres.
 
@@ -1586,6 +1667,7 @@ Soil Grain Matrix (ε_s ≈ 3 - 5) + Air Voids (ε_air = 1) + Bound Water (ε_bw
 
 * Contains negligible moisture ($m_v \approx 0$).
 * Dielectric properties are frequency-independent and depend solely on the dry bulk packing density $\rho_b$ ($\text{g/cm}^3$):
+
   $$\epsilon_{\text{dry}}' = \left(1 + 0.44 \rho_b\right)^2 \approx 2.5 - 3.5, \qquad \epsilon_{\text{dry}}'' \le 0.05$$
 * Dry soil acts as a low-loss dielectric with penetration depths reaching several wavelengths.
 
@@ -1611,6 +1693,7 @@ Dielectric Constant ε'_soil
 1. **Bound Water Phase ($m_v \le m_t$):**
    * Water molecules in the first few monolayers are tightly held against the charged surfaces of clay and silt particles by matric and osmotic forces.
    * Dipole rotation is structurally constrained, so bound water exhibits ice-like dielectric behaviour:
+
      $$\epsilon_{\text{bw}}' \approx 3.1 - 4.0, \quad \epsilon_{\text{bw}}'' \approx 0.1 - 0.5$$
    * As moisture increases from zero up to the transition moisture threshold ($m_t \approx 0.05 - 0.10$), the total soil dielectric constant increases only gradually.
 2. **Free (Bulk) Water Phase ($m_v > m_t$):**
@@ -1634,13 +1717,16 @@ Separating into components:
 $$\epsilon_v' = \epsilon_r + v_{\text{fw}} \epsilon_{\text{fw}}' + v_{\text{bw}} \epsilon_{\text{bw}}', \qquad \epsilon_v'' = v_{\text{fw}} \epsilon_{\text{fw}}'' + v_{\text{bw}} \epsilon_{\text{bw}}''$$
 
 * $\epsilon_r$ is a non-dispersive residual dielectric constant representing dry plant matter:
+
   $$\epsilon_r = 1.7 - 0.74 m_g + 6.1 m_g^2$$
 * $m_g$ is the gravimetric moisture fraction of the leaf ($0 \le m_g \le 1$).
 * $v_{\text{fw}}$ is the volume fraction of **free water**: $v_{\text{fw}} = m_g (0.55 m_g - 0.076)$.
 * $v_{\text{bw}}$ is the volume fraction of **bound water**: $v_{\text{bw}} = \dfrac{4.64 m_g^2}{7.36 m_g^2 + 1}$.
 * $\epsilon_{\text{fw}}$ is the complex dielectric constant of free water, modelled using a Debye equation modified for salinity:
+
   $$\epsilon_{\text{fw}} = 4.9 + \frac{75.0}{1 + j \frac{f}{18}} - j \frac{18 \sigma}{f}$$
 * $\epsilon_{\text{bw}}$ is the complex dielectric constant of bound water:
+
   $$\epsilon_{\text{bw}} = 2.9 + \frac{55.0}{1 + \left(j \frac{f}{0.18}\right)^{0.5}}$$
 
 *Implications:* At microwave frequencies, leafy canopies with high moisture content attenuate radar signals through volume scattering and dielectric absorption, limiting penetration to upper canopy layers unless longer wavelengths (L- or P-band) are used.
@@ -1656,17 +1742,17 @@ $$\epsilon_v' = \epsilon_r + v_{\text{fw}} \epsilon_{\text{fw}}' + v_{\text{bw}}
 > **Answer:**
 >
 > **Part 1: Definition**
-> A spectral reflectance curve is a graphical plot of the spectral reflectance ($\rho_\lambda = \Phi_r(\lambda)/\Phi_i(\lambda)$) of an Earth feature as a function of wavelength ($\lambda$) across the electromagnetic spectrum. It serves as a diagnostic spectral signature for identifying, mapping, and monitoring surface materials.
+> A spectral reflectance curve is a graphical plot of the spectral reflectance $\rho_\lambda = \Phi_r(\lambda)/\Phi_i(\lambda)$ of an Earth feature as a function of wavelength ($\lambda$) across the electromagnetic spectrum. It serves as a diagnostic spectral signature for identifying, mapping, and monitoring surface materials.
 >
 > **Part 2: Spectral Reflectance Curve of Vegetation**
 > The reflectance curve of healthy green vegetation is defined by three main spectral regions:
-> 1. **Visible Spectrum ($0.4 - 0.7\ \mu\text{m}$):** Dominated by leaf pigment absorption. Chlorophyll-$a$ and $b$ absorb strongly in the blue ($0.45\ \mu\text{m}$) and red ($0.66\ \mu\text{m}$) bands for photosynthesis. A localized reflectance peak ($\approx 10 - 15\%$) occurs in the green band ($0.55\ \mu\text{m}$), which makes healthy vegetation appear green.
+> 1. **Visible Spectrum ($0.4 - 0.7\ \mu\text{m}$):** Dominated by leaf pigment absorption. $\text{Chlorophyll-}a$ and $b$ absorb strongly in the blue ($0.45\ \mu\text{m}$) and red ($0.66\ \mu\text{m}$) bands for photosynthesis. A localized reflectance peak ($\approx 10 - 15\%$) occurs in the green band ($0.55\ \mu\text{m}$), which makes healthy vegetation appear green.
 > 2. **Near-Infrared Region ($0.7 - 1.3\ \mu\text{m}$):** Characterized by a sharp increase in reflectance known as the **Red Edge** ($0.68 - 0.75\ \mu\text{m}$), reaching a high reflectance plateau of $40 - 50\%$. Plant tissues exhibit low absorption here. High reflectance is driven by multiple internal Fresnel reflections across refractive index boundaries between hydrated cell walls ($n \approx 1.52$) and intercellular air spaces within the spongy mesophyll.
 > 3. **Shortwave / Mid-Infrared Region ($1.3 - 2.5\ \mu\text{m}$):** Controlled by liquid water absorption in leaf tissue. Exhibits prominent absorption dips at $1.4\ \mu\text{m}$, $1.9\ \mu\text{m}$, and $2.7\ \mu\text{m}$. Reflectance between these dips (at $1.6\ \mu\text{m}$ and $2.2\ \mu\text{m}$) varies inversely with foliar water content.
 >
 > **Part 3: Significance in Remote Sensing Applications**
 > * **Vegetation Health & Stress Monitoring:** Under plant stress or chlorosis, chlorophyll production falls, red absorption drops, and the red edge shifts toward shorter wavelengths ("blue shift").
-> * **Vegetation Indices:** Measuring the difference between low red and high NIR reflectance enables calculation of indices such as **NDVI** ($(\rho_{\text{NIR}} - \rho_{\text{R}})/(\rho_{\text{NIR}} + \rho_{\text{R}})$), which correlates directly with leaf area index (LAI), green biomass, and fractional vegetation cover.
+> * **Vegetation Indices:** Measuring the difference between low red and high NIR reflectance enables calculation of indices such as **NDVI** $(\rho_{\text{NIR}} - \rho_{\text{R}})/(\rho_{\text{NIR}} + \rho_{\text{R}})$, which correlates directly with leaf area index (LAI), green biomass, and fractional vegetation cover.
 > * **Drought & Irrigation Management:** Changes in the SWIR water absorption dips ($1.6\ \mu\text{m}$) are used to compute the Normalized Difference Water Index (NDWI) for tracking crop water stress.
 > * **Crop Classification:** Multi-temporal spectral curves allow discrimination between crop species based on phenological variations in their reflectance signatures.
 
@@ -1696,6 +1782,7 @@ $$\epsilon_v' = \epsilon_r + v_{\text{fw}} \epsilon_{\text{fw}}' + v_{\text{bw}}
 >
 > **Part 1: What is a Dielectric?**
 > A dielectric is an electrical insulator that supports electrostatic and alternating electric fields with minimal conduction current. When exposed to an external electric field $\vec{E}$, its bound internal charges displace slightly from their equilibrium positions, creating induced atomic and molecular dipoles (dielectric polarization). Its behaviour is parameterized by the complex dielectric constant:
+>
 > $$\epsilon_r = \epsilon_r' - j \epsilon_r''$$
 > where $\epsilon_r'$ represents energy storage through polarization, and $\epsilon_r''$ represents dissipation losses.
 >
@@ -1810,6 +1897,7 @@ Three strict physical conditions are required:
 1. **Circular Orbit:** Eccentricity $e = 0$ (constant orbital speed).
 2. **Zero Inclination:** $i = 0^\circ$ (must lie strictly within the geographic equatorial plane; if $i > 0$, the satellite traces an apparent north-south figure-eight pattern called an *analemma*).
 3. **Period Match:** The orbital period $T$ must equal one **sidereal day**:
+
    $$T = 23\ \text{hours, } 56\ \text{minutes, } 4.09\ \text{seconds} \approx 86164.1\ \text{s}$$
 
 #### B. Derivation of Geostationary Altitude ($h_{\text{GEO}}$)
@@ -2016,17 +2104,25 @@ Before sleeping tonight, write out these **5 mathematical derivations** and prac
 #### Derivations
 
 1. **Exponential Wave Attenuation & Loss Tangent:**
+
    $$\nabla^2 \vec{E} = \gamma^2 \vec{E}, \quad \gamma = \alpha + j\beta = j\omega\sqrt{\mu\epsilon_c}$$
+
    $$\mathcal{E}_x(z, t) = E_0 e^{-\alpha z}\cos(\omega t - \beta z), \qquad \tan\delta = \frac{|\vec{J}_c|}{|\vec{J}_d|} = \frac{\sigma}{\omega\epsilon} = \frac{\epsilon''}{\epsilon'}$$
 2. **Rayleigh-Jeans Limit from Planck's Law:**
+
    $$hf \ll k_B T \implies e^{hf/k_B T} - 1 \approx \frac{hf}{k_B T} \implies \rho(f) \approx \frac{8\pi f^2}{c^3} k_B T$$
 3. **Wien's Displacement Law:**
+
    $$\frac{d B_\lambda}{d\lambda} = 0 \implies x = 5(1 - e^{-x}), \quad x = \frac{hc}{\lambda k_B T}$$
+
    $$x \approx 4.965 \implies \lambda_{\max} T = \frac{hc}{4.965\, k_B} \approx 2898\ \mu\text{m}\cdot\text{K}$$
 4. **Atmospheric Transmissivity vs. Zenith Opacity:**
+
    $$ds = dz \sec\theta \implies \frac{dI}{I} = -k_e\, dz \sec\theta \implies \Upsilon = \exp(-\tau_0 \sec\theta), \quad \tau_0 = \int_0^\infty k_e\, dz$$
 5. **Geostationary Altitude Derivation:**
+
    $$F_g = F_c \implies \frac{G M_E m}{r^2} = \frac{m v^2}{r} \implies r^3 = \frac{\mu_E T^2}{4\pi^2}$$
+
    $$T = 86164\ \text{s} \implies r \approx 42,164\ \text{km} \implies h = r - R_E \approx 35,786\ \text{km}$$
 
 #### Sketches / Graphs (Professors look for these first)
@@ -2060,7 +2156,7 @@ Before sleeping tonight, write out these **5 mathematical derivations** and prac
   * *Atmospheric opacity & transmissivity:* $\tau_0$, $\Upsilon = e^{-\tau_0 \sec\theta}$.
   * *Debye relaxation frequency:* $f_0 = 1/(2\pi\tau_w)$.
 * **Phase 3: Rest:**
-  * Get 6 to 7 hours of sleep. Derivations involving transcendental equations ($x = 5(1 - e^{-x})$) and complex algebra ($\epsilon_c = \epsilon' - j\epsilon''$) require mental clarity.
+  * Get 6 to 7 hours of sleep. Derivations involving transcendental equations $x = 5(1 - e^{-x})$ and complex algebra ($\epsilon_c = \epsilon' - j\epsilon''$) require mental clarity.
 
 ---
 
@@ -2079,11 +2175,12 @@ Physics and engineering faculty grade using a point-based rubric:
 
 1. **Always State the Governing Law First:**
    * Starting a wave attenuation answer? Begin with: *"Starting from Maxwell's curl equations for a lossy, source-free medium..."*
-   * Starting a blackbody answer? Begin with: *"According to Planck's quantum hypothesis, energy exchange occurs in discrete packets $E = nhf$..."*
+   * Starting a blackbody answer? Begin with: "According to Planck's quantum hypothesis, energy exchange occurs in discrete packets $E = nhf$..."
 2. **Define Every Symbol:** If you write $\gamma = \alpha + j\beta$, explicitly write:
-   * *$\alpha =$ Attenuation constant ($\text{Np/m}$)*
-   * *$\beta =$ Phase constant ($\text{rad/m}$)*
+   * $\alpha =$ Attenuation constant ($\text{Np/m}$)
+   * $\beta =$ Phase constant ($\text{rad/m}$)
 3. **Use Boxed Final Results:** Always draw a clean rectangular box around key equations and final answers:
+
    $$\boxed{\Upsilon = \exp(-\tau_0 \sec\theta)} \quad \text{or} \quad \boxed{\lambda_{\max} T \approx 2898\ \mu\text{m}\cdot\text{K}}$$
 4. **Structure Answers in Clear Sections:** Break each answer into labeled subheadings:
    * **Physical Definition**

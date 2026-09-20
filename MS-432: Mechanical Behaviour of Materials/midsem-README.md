@@ -93,18 +93,18 @@
 > Consider a bar of initial length $L$ that is stretched to double its length ($2L$), and subsequently compressed back to its original length ($L$):
 >
 > * **Using Engineering Strain ($\epsilon$):**
->   1. *Step 1 (Tensile elongation from $L \to 2L$):*
+>   1. *Step 1 (Tensile elongation from* $L \to 2L$*):*
 >      $$\epsilon_1 = \frac{2L - L}{L} = \frac{L}{L} = +1.0 \quad (+100\%)$$
->   2. *Step 2 (Compressive deformation from $2L \to L$):*
+>   2. *Step 2 (Compressive deformation from* $2L \to L$*):*
 >      $$\epsilon_2 = \frac{L - 2L}{2L} = \frac{-L}{2L} = -0.5 \quad (-50\%)$$
 >   3. *Total Net Engineering Strain:*
 >      $$\Sigma \epsilon = \epsilon_1 + \epsilon_2 = +1.0 - 0.5 = \mathbf{+0.5 \neq 0}$$
 >      *Contradiction:* The body has returned precisely to its initial geometry, yet engineering strain registers an artifact residual strain of $+50\%$. Engineering strain fails the condition of path additivity.
 >
 > * **Using True Strain ($\epsilon_T$):**
->   1. *Step 1 (Elongation from $L \to 2L$):*
+>   1. *Step 1 (Elongation from* $L \to 2L$*):*
 >      $$\epsilon_{T,1} = \ln\left(\frac{2L}{L}\right) = \ln(2) \approx \mathbf{+0.693}$$
->   2. *Step 2 (Compression from $2L \to L$):*
+>   2. *Step 2 (Compression from* $2L \to L$*):*
 >      $$\epsilon_{T,2} = \ln\left(\frac{L}{2L}\right) = \ln\left(\frac{1}{2}\right) = -\ln(2) \approx \mathbf{-0.693}$$
 >   3. *Total Net True Strain:*
 >      $$\Sigma \epsilon_T = \epsilon_{T,1} + \epsilon_{T,2} = \ln(2) + (-\ln(2)) = \mathbf{0}$$
@@ -356,7 +356,7 @@ $$\mathbf{m = \cos\phi \cos\lambda}$$
 
 #### C. Schmid's Law
 
-Schmid's Law states: *Plastic slip initiates on the slip system for which the resolved shear stress reaches a critical characteristic value, known as the **Critical Resolved Shear Stress ($\tau_{\text{CRSS}}$)**, regardless of the orientation of the crystal or applied stress axis.*
+Schmid's Law states: Plastic slip initiates on the slip system for which the resolved shear stress reaches a critical characteristic value, known as the **Critical Resolved Shear Stress ($\tau_{\text{CRSS}}$)**, regardless of the orientation of the crystal or applied stress axis.
 
 $$\mathbf{\tau_{\text{CRSS}} = \sigma_y \cos\phi \cos\lambda = \sigma_y \cdot m}$$
 $$\implies \mathbf{\sigma_y = \frac{\tau_{\text{CRSS}}}{\cos\phi \cos\lambda} = \frac{\tau_{\text{CRSS}}}{m}}$$
@@ -389,13 +389,13 @@ $$\implies \mathbf{\sigma_y = \frac{\tau_{\text{CRSS}}}{\cos\phi \cos\lambda} = 
 ### 3. Crystallography of Slip Systems in FCC and BCC
 
 A **slip system** is defined as a combination of a slip plane and a slip direction:
-$$\text{Slip System} = \{hkl\}\langle uvw\rangle$$
+$$\text{Slip System} = \\{hkl\\}\langle uvw\rangle$$
 
 Slip occurs preferentially along **closest-packed planes** (highest planar atomic density, largest interplanar spacing $d_{hkl}$) and along **closest-packed directions** (highest linear atomic density, shortest Burgers vector $|\vec{b}|$).
 
 #### A. Face-Centered Cubic (FCC)
 
-* **Slip Plane:** $\{111\}$ octahedral planes ($4$ unique planes).
+* **Slip Plane:** $\\{111\\}$ octahedral planes ($4$ unique planes).
 * **Slip Direction:** $\langle 110\rangle$ face-diagonal directions ($3$ per plane).
 * **Total Primary Slip Systems:**
   $$4 \text{ planes} \times 3 \text{ directions/plane} = \mathbf{12 \text{ slip systems}}$$
@@ -418,7 +418,7 @@ Slip occurs preferentially along **closest-packed planes** (highest planar atomi
 > 1. Direction $[110]$: $1 - 1 + 0 = 0$ $\implies$ **Valid slip direction: $[110]$** (or $[\bar{1}\bar{1}0]$)
 > 2. Direction $[011]$: $0 - 1 + 1 = 0$ $\implies$ **Valid slip direction: $[011]$** (or $[0\bar{1}\bar{1}]$)
 > 3. Direction $[10\bar{1}]$: $1 - 0 + (-1) = 0$ $\implies$ **Valid slip direction: $[10\bar{1}]$** (or $[\bar{1}01]$)
-> *(Note: Other combinations like $[101] \implies 1 - 0 + 1 = 2 \neq 0$ do not lie on this plane).*
+> *(Note: Other combinations like* $[101] \implies 1 - 0 + 1 = 2 \neq 0$ *do not lie on this plane).*
 >
 > **Final Answer:**
 > The three independent slip directions on the $(1\bar{1}1)$ plane are:
@@ -430,12 +430,12 @@ Slip occurs preferentially along **closest-packed planes** (highest planar atomi
 
 #### B. Body-Centered Cubic (BCC)
 
-* Does not possess a truly close-packed plane like $\{111\}_{\text{FCC}}$.
+* Does not possess a truly close-packed plane like $\\{111\\}_{\text{FCC}}$.
 * **Slip Direction:** $\langle 111\rangle$ body-diagonal directions (strictly close-packed, $|\vec{b}| = \frac{a\sqrt{3}}{2}$).
 * **Active Slip Planes:** Slip can occur on multiple planes containing the $\langle 111\rangle$ direction:
-  * $\{110\}$ planes: $6 \text{ planes} \times 2 \text{ directions} = 12 \text{ systems}$
-  * $\{112\}$ planes: $12 \text{ planes} \times 2 \text{ directions} = 24 \text{ systems}$
-  * $\{123\}$ planes: $24 \text{ planes} \times 1 \text{ direction} = 24 \text{ systems}$
+  * $\\{110\\}$ planes: $6 \text{ planes} \times 2 \text{ directions} = 12 \text{ systems}$
+  * $\\{112\\}$ planes: $12 \text{ planes} \times 2 \text{ directions} = 24 \text{ systems}$
+  * $\\{123\\}$ planes: $24 \text{ planes} \times 1 \text{ direction} = 24 \text{ systems}$
 * **Total Potential Systems:** Up to **$48 \text{ slip systems}$**.
 
 ---
@@ -447,12 +447,12 @@ Slip occurs preferentially along **closest-packed planes** (highest planar atomi
 > **Answer:**
 >
 > 1. **In FCC Metals (Straight Slip Lines):**
->    * Slip is strictly confined to the four close-packed $\{111\}$ planes, where planar density is highest ($74\%$ atomic packing).
->    * Cross-slip from one $\{111\}$ plane to another requires constricting extended partial dislocations (which are split by a stacking fault ribbon), requiring high activation energy.
->    * Consequently, dislocations glide extensively on the same planar $\{111\}$ surface, creating **sharp, planar, straight slip traces**.
+>    * Slip is strictly confined to the four close-packed $\\{111\\}$ planes, where planar density is highest ($74\%$ atomic packing).
+>    * Cross-slip from one $\\{111\\}$ plane to another requires constricting extended partial dislocations (which are split by a stacking fault ribbon), requiring high activation energy.
+>    * Consequently, dislocations glide extensively on the same planar $\\{111\\}$ surface, creating **sharp, planar, straight slip traces**.
 >
 > 2. **In BCC Metals like $\alpha$-Iron (Wavy Slip Lines):**
->    * BCC metals have a common close-packed slip direction ($\langle 111\rangle$) shared by many intersecting planes ($\{110\}$, $\{112\}$, $\{123\}$).
+>    * BCC metals have a common close-packed slip direction ($\langle 111\rangle$) shared by many intersecting planes ($\\{110\\}$, $\\{112\\}$, $\\{123\\}$).
 >    * Screw dislocations in BCC have a non-planar, asymmetric core structure with a low cross-slip barrier.
 >    * As screw dislocations glide, they readily and frequently **cross-slip** among multiple intersecting planes that share the common $\langle 111\rangle$ zone axis (a phenomenon known as **pencil glide**).
 >    * Macroscopically, this continuous switching between planes appears as **undulated, wavy slip lines**.
@@ -465,7 +465,7 @@ Slip occurs preferentially along **closest-packed planes** (highest planar atomi
 >
 > **Answer:**
 >
-> 1. **Activation of Secondary Slip Systems:** At room temperature, FCC deformation is dominated by the primary $12 \times \{111\}\langle 110\rangle$ slip systems. At elevated temperatures, additional thermal energy provides the driving force to activate higher-energy **secondary slip systems** (e.g., $\{110\}\langle 110\rangle$ and $\{100\}\langle 110\rangle$), providing more independent degrees of plastic deformation.
+> 1. **Activation of Secondary Slip Systems:** At room temperature, FCC deformation is dominated by the primary $12 \times \\{111\\}\langle 110\rangle$ slip systems. At elevated temperatures, additional thermal energy provides the driving force to activate higher-energy **secondary slip systems** (e.g., $\\{110\\}\langle 110\rangle$ and $\\{100\\}\langle 110\rangle$), providing more independent degrees of plastic deformation.
 > 2. **Enhanced Dislocation Mobility & Cross-Slip:** Thermal activation assists extended partial dislocations to constrict and overcome obstacles via cross-slip and climb. This relieves dislocation pile-ups and reduces work hardening.
 > 3. **Result:** Lower thermal barrier for flow reduces yield strength ($\sigma_y \downarrow$), while increased slip freedom and delay of localized necking increase elongation to failure ($\text{ductility} \uparrow$).
 
@@ -725,7 +725,7 @@ If $b_1^2 + b_2^2 < b_3^2$, the dislocations elastically **repel** each other.
 
 #### D. Mathematical Example of Lomer-Cottrell Formation in FCC
 
-Consider two glissile dislocations in an FCC lattice gliding on two different $\{111\}$ slip planes:
+Consider two glissile dislocations in an FCC lattice gliding on two different $\\{111\\}$ slip planes:
 
 * Dislocation 1 glides on plane $(111)$ with Burgers vector:
   $$\vec{b}_1 = \frac{a}{2}[0, 1, \bar{1}]$$
@@ -749,7 +749,7 @@ Consider two glissile dislocations in an FCC lattice gliding on two different $\
 
    The slip plane containing this dislocation must contain both $\vec{b}_3$ and the plane formed by subsequent partial reactions. More critically, when the leading partials of extended dislocations react, they create a sessile edge dislocation whose slip plane normal $\vec{n} = (hkl)$ is given by the Weiss zone law with line direction and $\vec{b}_3$:
    $$\vec{n} = [1, 1, 1] - [1, 1, -1] \propto \mathbf{(001)}$$
-   * **Crucial Physical Fact:** In FCC metals, $\{001\}$ planes are **not close-packed** and do not serve as slip planes at ordinary temperatures.
+   * **Crucial Physical Fact:** In FCC metals, $\\{001\\}$ planes are **not close-packed** and do not serve as slip planes at ordinary temperatures.
    * Therefore, the product dislocation is physically **locked in the $(001)$ plane and cannot glide**.
    * It forms a rigid, immovable obstacle known as a **Lomer-Cottrell Lock (Barrier)**.
 
@@ -763,10 +763,10 @@ Consider two glissile dislocations in an FCC lattice gliding on two different $\
 >
 > **Answer:**
 >
-> 1. **Plane of Sessile Dislocation:** The slip plane of the Lomer-Cottrell sessile dislocation in FCC is a **$\{001\}$ plane (such as $(001)$ or $(100)$)**.
-> 2. **Why It is Sessile:** In FCC crystals, slip occurs almost exclusively on the $\{111\}$ close-packed planes because they possess the maximum interplanar spacing and lowest Peierls stress. Because $\{001\}$ planes have higher Peierls resistance and the Burgers vector does not lie on a $\{111\}$ glide plane, the dislocation line cannot move under normal shear stresses.
+> 1. **Plane of Sessile Dislocation:** The slip plane of the Lomer-Cottrell sessile dislocation in FCC is a **$\\{001\\}$ plane**, such as $(001)$ or $(100)$.
+> 2. **Why It is Sessile:** In FCC crystals, slip occurs almost exclusively on the $\\{111\\}$ close-packed planes because they possess the maximum interplanar spacing and lowest Peierls stress. Because $\\{001\\}$ planes have higher Peierls resistance and the Burgers vector does not lie on a $\\{111\\}$ glide plane, the dislocation line cannot move under normal shear stresses.
 > 3. **Strain Hardening Mechanism:**
->    * When mobile dislocations glide on their respective $\{111\}$ planes, they cannot cut through or bypass the immobile Lomer-Cottrell lock.
+>    * When mobile dislocations glide on their respective $\\{111\\}$ planes, they cannot cut through or bypass the immobile Lomer-Cottrell lock.
 >    * Subsequent trailing dislocations on both slip systems pile up behind this barrier.
 >    * These dislocation pile-ups produce massive long-range elastic back-stresses, blocking further dislocation motion on both planes.
 >    * To continue plastic flow, a much higher applied stress is required to either force dislocations past the pile-up or activate secondary, less favorable slip systems. This directly causes **rapid Stage II strain hardening (work hardening)**.
@@ -895,7 +895,7 @@ The **yield point phenomenon** is a sharp transition from elastic to plastic def
    * These bands propagate steadily along the length of the specimen at constant lower yield stress until they sweep through the entire gauge length.
    * Once the entire gauge length has undergone this initial Lüders strain, uniform **strain hardening** begins.
 
-*Note: High-carbon steels do not exhibit a distinct sharp yield point drop because extensive carbide precipitates ($\text{Fe}_3\text{C}$) and high initial forest dislocation densities prevent collective unpinning.*
+**Note:** High-carbon steels do not exhibit a distinct sharp yield point drop because extensive carbide precipitates ($\text{Fe}_3\text{C}$) and high initial forest dislocation densities prevent collective unpinning.
 
 ---
 
@@ -1011,7 +1011,7 @@ The introduction of foreign solute atoms into a pure host metal lattice impedes 
 >
 > **Q:** Explain solid solution strengthening. What is the effect of solute content on the stress–strain response? *(1+1 Marks)*
 >
-> **Answer:** *(Draw the stress–strain plot showing pure Al vs. $\text{Al}+c_1$ vs. $\text{Al}+c_2$ where $c_2 > c_1$: identical elastic slope, progressively higher $\sigma_y$ and $\text{UTS}$, lower failure elongation).*
+> **Answer:** (Draw the stress–strain plot showing pure Al vs. $\text{Al}+c_1$ vs. $\text{Al}+c_2$ where $c_2 > c_1$: identical elastic slope, progressively higher $\sigma_y$ and $\text{UTS}$, lower failure elongation).
 
 ---
 
@@ -1167,7 +1167,7 @@ $$\mathbf{\text{SSSS} \longrightarrow \text{Solute Clusters / GP Zones} \longrig
 | **Slip vs. Twinning** | Fractional $b$ vs. integer $b$ | Slip lines polish away (surface steps); twins persist (internal lattice reorientation). |
 | **Bauschinger Effect** | $\tau_{\text{reverse}} < \tau_{\text{forward}}$ | Pile-up back-stress ($\tau_b$) opposes forward flow, aids reverse flow; opposite-sign annihilation. |
 | **Frank-Read Source** | $\tau_{\text{crit}} = Gb/L$ | Pinned segment bows to critical semicircle $R = L/2$, loops, annihilates, and regenerates. |
-| **Lomer-Cottrell Lock** | $b_1^2 + b_2^2 > b_3^2$ | Glissile dislocations on intersecting $\{111\}$ form sessile dislocation on non-slip $\{001\}$ plane. |
+| **Lomer-Cottrell Lock** | $b_1^2 + b_2^2 > b_3^2$ | Glissile dislocations on intersecting $\\{111\\}$ form sessile dislocation on non-slip $\\{001\\}$ plane. |
 | **Yield Point Phenomenon** | Upper & Lower Yield Points | Interstitial $\text{C/N}$ form Cottrell atmosphere below extra half-plane; Lüders band propagation. |
 | **Dynamic Strain Aging** | Serrated yielding (PLC effect) | Solute diffusion speed matches dislocation glide speed ($v_s \approx v_d$); repeated catch-and-release. |
 | **Precipitation Peak** | $r = r_c$ ($\tau_{\text{cutting}} = \tau_{\text{Orowan}}$) | Cutting dominates for small coherent particles; Orowan looping dominates for coarsened overaged particles. |
@@ -1194,9 +1194,9 @@ Based directly on the historical papers (2021, 2022, 2024, 2025) and lecture not
    * Glide vs. Climb vs. Cross-slip.
 5. **Dislocation Multiplication Mechanisms (Rotates between two questions — 4 Marks):**
    * **Even years (2022, 2024):** Frank-Read Source (bow-out, semicircle $R = L/2$, loop pinch-off).
-   * **Odd years / Variations (2021, 2025):** Lomer–Cottrell lock / Sessile dislocation (reaction on intersecting $\{111\}$ forming lock on $\{001\}$, Frank's $b^2$ rule).
+   * **Odd years / Variations (2021, 2025):** Lomer–Cottrell lock / Sessile dislocation (reaction on intersecting $\\{111\\}$ forming lock on $\\{001\\}$, Frank's $b^2$ rule).
 6. **Slip Line Morphology in BCC vs. FCC (2022, 2024 — 2 Marks):**
-   * Straight in FCC (planar slip on $\{111\}$) vs. Wavy in BCC (pencil glide, frequent cross-slip of screw dislocations among $\{110\}$, $\{112\}$, $\{123\}$).
+   * Straight in FCC (planar slip on $\\{111\\}$) vs. Wavy in BCC (pencil glide, frequent cross-slip of screw dislocations among $\\{110\\}$, $\\{112\\}$, $\\{123\\}$).
 7. **Theoretical vs. Real Shear Strength (2025, 2021 — 3 to 5 Marks):**
    * Derivation of $\tau_m \approx G/2\pi$ and why real yield strength is 100–1000 times lower (simultaneous bond breaking vs. sequential dislocation glide).
 
@@ -1262,4 +1262,4 @@ Note the paper header: **"Please be brief and to the point while answering."** T
 
 * **First 5 Minutes:** Scan the paper and spot the familiar questions. Start immediately with the **derivation (CRSS or theoretical shear strength)** or the **Bauschinger effect**. These are mechanical, high-scoring questions that build momentum.
 * **Next 40–50 Minutes:** Answer all descriptive and conceptual questions in crisp bullet points.
-* **Final 10 Minutes:** Check all diagrams: Ensure all axes are labeled (e.g., $\sigma$ vs. $\epsilon$, $\tau$ vs. $\gamma$), vectors have arrows ($\vec{b}, \hat{t}$), and planes/directions have correct brackets ($\{ \}$ for planes, $\langle \rangle$ for directions, $( )$ for specific plane, $[ ]$ for specific direction).
+* **Final 10 Minutes:** Check all diagrams: Ensure all axes are labeled (e.g., $\sigma$ vs. $\epsilon$, $\tau$ vs. $\gamma$), vectors have arrows ($\vec{b}, \hat{t}$), and planes/directions have correct brackets ($\\{ \\}$ for planes, $\langle \rangle$ for directions, $( )$ for specific plane, $[ ]$ for specific direction).
