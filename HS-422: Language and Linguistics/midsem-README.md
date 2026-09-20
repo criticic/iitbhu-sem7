@@ -170,7 +170,34 @@ Charles F. Hockett (1958, 1960) established comparative metrics to differentiate
 >
 > **Answer:**
 >
-> *(Refer to the structural analysis and comparative table in Question 1 above, highlighting Hockett's key design features: Discrete Infinity/Productivity, Duality of Patterning, and Displacement as the three core pillars of uniqueness.)*
+> **1. What Makes Human Language Unique:**
+> Human language is a species-specific, rule-governed symbolic system distinguished by design features absent from all animal communication systems:
+>
+> * **Productivity / Discrete Infinity:** From a finite inventory of phonemes and morphemes, humans generate an unbounded number of novel sentences expressing entirely new concepts.
+> * **Duality of Patterning:** Language is organized on two independent levels — meaningless sound units (phonemes) combine into meaningful units (words, sentences). Animal signals are holistic and non-decomposable.
+> * **Displacement:** Humans can refer to the past, future, hypothetical, and imaginary referents far removed from the here-and-now; animal calls are tied to the immediate stimulus.
+> * **Recursion / Structure Dependence:** Human syntax recursively embeds phrases within phrases and applies operations to hierarchical structure rather than linear order, giving unlimited expressive reach.
+> * **Arbitrariness and Reflexiveness:** The sound–meaning link is conventional rather than iconic, and language can itself be used to analyze language (metalinguistic reflexiveness).
+> * **Cultural Transmission:** Language is culturally transmitted across generations rather than genetically fixed, enabling rapid historical change.
+>
+> **2. Differences from Animal Communication:**
+>
+> | Dimension | Human Language | Animal Communication |
+> | :--- | :--- | :--- |
+> | **Productivity** | Infinite and creative; unbounded combinatorial output. | Closed and non-productive; fixed inventory of calls. |
+> | **Displacement** | Free reference to past, future, hypothetical, and non-present. | Tied to the immediate perceptual present. |
+> | **Duality of Patterning** | Two-tiered (phoneme → morpheme → sentence). | Single-tiered, holistic signals. |
+> | **Structure** | Hierarchical, recursive syntax. | Flat, associative stimulus–response chains. |
+> | **Transmission** | Culturally transmitted and learned. | Largely genetically wired and species-specific. |
+> | **Reflexiveness** | Can refer to and analyze its own system. | Cannot comment on its own system. |
+>
+> **3. Similarities (for Balance):**
+> Both systems are communicative and serve ecological/social functions (threat, mating, territory, group cohesion); both use multiple sensory modalities; and both can be context-sensitive in interpretation.
+>
+> **4. Why the Difference:**
+> The divide is cognitive and biological. Human language rests on an innate Language Acquisition Device / Universal Grammar and dedicated neural circuitry (Broca's and Wernicke's areas) supporting recursive Merge. Animal systems lack this syntax-generating capacity, relying on genetically fixed or associative repertoires.
+>
+> **Conclusion:** Human language is unique principally because of its combination of discreteness, duality of patterning, displacement, and unbounded recursive productivity — a package no animal communication system possesses.
 
 <a name="part-2"></a>
 ## Part 2: Innateness, Acquisition, Cultural Transmission & Language Evolution
@@ -691,7 +718,21 @@ In semantic space, words that share semantic properties, selectional restriction
 >
 > **Answer:**
 >
-> *(Refer to Section 3 above, detailing how the interaction between Syntax, Semantics, and Pragmatics allows compositional sentences to balance literal propositions with complex contextual inferences, indirect speech acts, and factive assertions.)*
+> **1. The Notion of a Language Module:**
+> The language faculty is organized into autonomous yet interacting subsystems or **modules** — phonological, morphological, syntactic, semantic, and pragmatic. Modularity provides a "division of cognitive labor," allowing the mind to assemble meaning in stages without cognitive overload. Crucially, **complex meaning is not the product of any single module**; it emerges from their calibrated interaction.
+>
+> **2. Significance of Modularity for Complex Meaning:**
+>
+> * **Compositional Assembly (Semantics):** The semantic module assigns literal propositional content to the hierarchical structure built by syntax (Frege's principle of compositionality). Complex meaning therefore depends on how the syntactic module organizes constituents.
+> * **Realizing Grammatical Relations (Morphosyntax):** The morphological module supplies the inflection, case markers, and auxiliaries that realize relations dictated by syntax — e.g., the Hindi ergative **-ने (-ne)** on the agent of a completed transitive action (*Ram-ne kitāb paṛhī*).
+> * **Beyond the Literal (Semantics–Pragmatics Interface):** The pragmatic module enriches literal content via Gricean maxims. In *"Are you coming to the party?" / "I have an exam tomorrow,"* semantics gives a factual statement, while pragmatics derives the implicature that the speaker will not attend (Relevance Maxim).
+> * **Stance and Commitment (Syntax–Pragmatics Interface):** Complementizer choice encodes epistemic stance: *"She knows [that he left]"* is factive/presupposed, whereas *"She wonders [if he left]"* encodes uncertainty.
+> * **Prosodic Modulation (Phonology–Pragmatics Interface):** Intonation alters pragmatic meaning without syntactic change: *"She left."* (falling intonation → assertion) vs. *"She left?"* (rising intonation → surprise or request for confirmation).
+>
+> **3. Why This Matters:**
+> Modular interaction explains how a single sentence carries multiple layers of meaning simultaneously — literal proposition, speaker intent, presupposition, and social stance. It also explains linguistic creativity: a finite, modular system generates an unbounded range of context-sensitive meanings.
+>
+> **Conclusion:** The language module is significant because complex meaning is *compositional and multi-layered*: syntax and morphology supply structure and its formal realization, semantics supplies literal content, and pragmatics integrates context, intent, and inference.
 
 <a name="part-4"></a>
 ## Part 4: Linguistic Regularities: Patterns, Rules, and Analogies
@@ -1001,7 +1042,7 @@ Because structural boundaries cannot be determined by visual inspection or intui
 | Test | Diagnostic Mechanism | Concrete Examples | Inherent Limitations & Caveats |
 | :--- | :--- | :--- | :--- |
 | **1. Replacement (Substitution)** | If a sequence can be replaced by a single pro-form (pronoun, *do so*, *there*, *then*) while preserving the sentence's grammatical relations, the sequence forms a constituent. | • **NP:** I met [the new professor] $\to$ I met **her**.<br>• **PP:** She lives [in New Delhi] $\to$ She lives **there**.<br>• **VP:** Ravi [read the paper], and Meera **did so** too. | **Negative evidence is inconclusive:** Not every valid constituent has a convenient pro-form in English. Pro-forms like *do so* are restricted to non-stative VPs. |
-| **2. Movement (Topicalization / Fronting)** | If a sequence can be moved together as an intact block to another syntactic position (such as clause-initial position), it is a constituent. | • *The students read [the article] in the library.* $\to$ **[The article]**, the students read __ in the library.<br>• *[The old wooden table] collapsed.* $\to$ **[The old wooden table]**, we moved __ yesterday.<br>• *\*[Old wooden]* the table, we moved yesterday. | **Island constraints and discourse factors:** Constituents trapped inside complex noun phrases or coordinate structures cannot move due to syntactic islands, even though they are constituents. |
+| **2. Movement (Topicalization / Fronting)** | If a sequence can be moved together as an intact block to another syntactic position (such as clause-initial position), it is a constituent. | • *The students read [the article] in the library.* $\to$ **[The article]**, the students read \_\_ in the library.<br>• *[The old wooden table] collapsed.* $\to$ **[The old wooden table]**, we moved \_\_ yesterday.<br>• *\*[Old wooden]* the table, we moved yesterday. | **Island constraints and discourse factors:** Constituents trapped inside complex noun phrases or coordinate structures cannot move due to syntactic islands, even though they are constituents. |
 
 | **3. It-Clefting** | Evaluates whether a sequence can occupy the focused position in the construction:<br>$$\text{It} + \text{BE} + \mathbf{[Target]} + \text{that/who}\dots$$ | • **NP:** Maya bought [the red book]. $\to$ *It was **[the red book]** that Maya bought.*<br>• **PP:** Maya met him [in the library]. $\to$ *It was **[in the library]** that Maya met him.*<br>• **AdvP:** Maya left [very quickly]. $\to$ *It was **[very quickly]** that Maya left.* | Mainly tests maximal projections like NPs, PPs, and AdvPs. Non-finite VPs rarely fit cleft frames comfortably (*?\*It was [read the book] that Maya did*). |
 | **4. Question–Answer (Fragment Test)** | If a string can stand alone as a natural, felicitous response to a corresponding *wh-*question, it forms a constituent. | • *"What did Maya buy?"* $\to$ **[The red book]**.<br>• *"Where did the teacher open it?"* $\to$ **[In the classroom]**.<br>• *"When did they arrive?"* $\to$ **[After lunch]**. | **Fragment ellipsis:** Pragmatic conversational contexts occasionally license non-constituent elliptical fragments in casual discourse. Must be supported by other tests. |
@@ -1452,7 +1493,30 @@ HEAD-INITIAL / VO HARMONY (e.g., English, Arabic)
 >
 > **Answer:**
 >
-> *(Refer to the detailed definitions, comparative breakdowns, and concrete examples in Section 1 of this unit.)*
+> **1. What is a Linguistic Universal?**
+> A linguistic universal is a structural pattern, architectural constraint, or operational law that recurs systematically across natural languages and is presumed true of the human species as a whole. Universals are taxonomized along three dichotomies.
+>
+> **2. Dichotomy 1 — Substantive vs. Formal Universals:**
+>
+> | Type | What it concerns | Examples |
+> | :--- | :--- | :--- |
+> | **Substantive** | The actual building blocks, categories, and feature inventories present across languages. | Nouns and Verbs as distinct classes; Agent/Patient semantic roles; consonants and vowels. |
+> | **Formal** | Abstract rules, structural constraints, and organizational principles (computational laws rather than lexical substance). | Structure dependence; Recursion (Merge); island constraints on movement. |
+>
+> **3. Dichotomy 2 — Implicational vs. Non-Implicational Universals:**
+>
+> * **Non-Implicational (Unconditional):** Assert the existence or absence of a feature in all languages, independent of any other property. *Examples:* all languages have pronouns; all spoken languages have oral vowels and stops.
+> * **Implicational (Conditional):** Link the presence of one feature to the presence of another: if a language has Feature X, it will also have Feature Y. *Example:* Greenberg Universal 3 — *if a language has dominant VSO order, it is always prepositional.*
+>
+> **4. Dichotomy 3 — Absolute Universals vs. Statistical Tendencies:**
+>
+> * **Absolute Universals:** Admit zero exceptions across documented languages, reflecting unyielding properties of the language faculty. *Examples:* all languages have negative expressions; all exhibit structure dependence; all distinguish nouns from verbs.
+> * **Statistical Tendencies:** Overwhelmingly frequent cross-linguistic preferences that nonetheless admit rare exceptions. *Examples:* most languages have nasal consonants (/m/, /n/), but a few Pacific Northwest languages lack them; in about 99% of languages the Subject precedes the Object, though rare object-first systems exist.
+>
+> **5. Why Universals Exist:**
+> 1. **Universal Grammar (Chomskyan):** an innate, genetically determined faculty constrains the possible forms a grammar can take (Poverty of the Stimulus argument).
+> 2. **Cognitive and Processing Efficiency:** shared parsing and memory limits favor certain orders (e.g., Dependency Length Minimization), and nouns map universally to entities while verbs map to relational events.
+> 3. **Shared Functional and Evolutionary Pressures:** all languages serve communication, selecting structures that maximize clarity while minimizing articulatory effort.
 
 <a name="part-7"></a>
 ## Part 7: Information Structure, Reference, & Syntactic Transformations

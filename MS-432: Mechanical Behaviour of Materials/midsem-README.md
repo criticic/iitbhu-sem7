@@ -289,11 +289,21 @@ A **dislocation** is a one-dimensional (line) defect in a crystal lattice that s
 >
 > **Q:** What are dislocations? Write down the different types of dislocations and explain them along with their motion and their relation of Burgers vector to dislocation line. *(1+2+1 / 4 Marks)*
 >
-> **Answer Structure:**
+> **Answer:**
 >
-> * Define dislocation as a 1D line defect producing plastic slip via sequential bond rupture.
-> * Define Edge ($\vec{b} \perp \hat{t}$), Screw ($\vec{b} \parallel \hat{t}$), and Mixed ($0 < \theta < 90^\circ$) dislocations with neat sketches.
-> * Explain glide (conservative, in-plane, stress-driven) vs. climb (non-conservative, out-of-plane, vacancy diffusion-assisted at high $T$) and cross-slip (screw only, moving across intersecting planes sharing $\vec{b}$).
+> **1. Dislocation — Definition:** A dislocation is a one-dimensional (line) defect that separates slipped and unslipped regions of a slip plane. Plastic deformation proceeds by the **sequential** breaking and re-forming of atomic bonds along the dislocation line, not by simultaneous rupture of an entire plane. It is characterized by the **Burgers vector** $\vec{b}$ (magnitude and direction of the lattice distortion) and the **line vector** $\hat{t}$ (unit tangent to the dislocation line).
+>
+> **2. Types of Dislocations:**
+>
+> * **Edge Dislocation:** Formed by inserting an extra half-plane of atoms into the lattice; $\vec{b} \perp \hat{t}$ ($\theta = 90^\circ$). Because $\vec{b}$ and $\hat{t}$ define a unique plane ($\vec{n} = \hat{t} \times \vec{b}$), an edge dislocation is confined to a **single, restricted slip plane**.
+> * **Screw Dislocation:** Formed by a shear displacement parallel to the cut line, giving a helical atomic ramp; $\vec{b} \parallel \hat{t}$ ($\theta = 0^\circ$ or $180^\circ$). Since $\vec{b} \parallel \hat{t}$, no unique slip plane is defined; any plane containing $\hat{t}$ and $\vec{b}$ can serve as a slip plane.
+> * **Mixed Dislocation:** Most real dislocations are curved loops with both characters; $\vec{b}$ makes an arbitrary angle $\theta$ ($0^\circ < \theta < 90^\circ$) with $\hat{t}$. It resolves into an edge component ($b_e = b \sin\theta$) and a screw component ($b_s = b \cos\theta$).
+>
+> **3. Dislocation Motion:**
+>
+> * **Glide (Conservative):** Motion within the slip plane with no mass transport; driven by mechanical resolved shear stress. An edge dislocation glides **parallel** to $\vec{b}$, while a screw dislocation glides **perpendicular** to $\vec{b}$.
+> * **Climb (Non-Conservative):** Out-of-plane motion of **edge** dislocations only, by emitting or absorbing vacancies/interstitials. It is diffusion-controlled and dominant at elevated temperatures ($T > 0.4\ T_m$).
+> * **Cross-Slip:** Operation of **screw** dislocations only; since $\vec{b} \parallel \hat{t}$, a blocked screw dislocation can transfer its glide onto an intersecting plane that shares the same $\vec{b}$.
 
 ---
 
@@ -374,7 +384,22 @@ $$\implies \mathbf{\sigma_y = \frac{\tau_{\text{CRSS}}}{\cos\phi \cos\lambda} = 
 >
 > **Q:** Why critical resolved shear stress is independent of the orientation of stress axis with respect to slip system? *(2 Marks)*
 >
-> **Answer Comparison:**
+> **Answer:**
+>
+> **Part 1: Derivation of the Critical Resolved Shear Stress**
+> Consider a cylindrical single crystal of cross-sectional area $A$ loaded axially by a force $F$, giving nominal stress $\sigma = F/A$. Let the slip plane normal $\vec{N}$ make an angle $\phi$ with the tensile axis, and let the slip direction $\vec{D}$ lying in the slip plane make an angle $\lambda$ with the tensile axis.
+>
+> 1. **Area of the inclined slip plane** (projection of the axial area onto the plane):
+>    $$A_s = \frac{A}{\cos\phi}$$
+> 2. **Force resolved along the slip direction:**
+>    $$F_D = F \cos\lambda$$
+> 3. **Resolved shear stress on the slip system:**
+>    $$\tau_{\text{RSS}} = \frac{F_D}{A_s} = \frac{F \cos\lambda}{A/\cos\phi} = \sigma \cos\phi \cos\lambda$$
+> 4. **Critical condition (Schmid's Law):** Slip initiates on the most favorably oriented slip system when $\tau_{\text{RSS}}$ reaches the intrinsic constant $\tau_{\text{CRSS}}$:
+>    $$\tau_{\text{CRSS}} = \sigma_y \cos\phi \cos\lambda = \sigma_y \cdot m \implies \sigma_y = \frac{\tau_{\text{CRSS}}}{m}$$
+>    where the maximum Schmid factor is $m_{\text{max}} = 0.5$ at $\phi = \lambda = 45^\circ$.
+>
+> **Part 2: Schmid's Law vs. Schmid Factor**
 >
 > | Parameter | Schmid's Law | Schmid Factor ($m$) |
 > | :--- | :--- | :--- |
@@ -509,7 +534,16 @@ Plastic deformation in crystals proceeds primarily through **Slip** or **Twinnin
 >
 > **Q:** Why slip lines are removed after polishing, but twin planes/deformation bands do not disappear even after polishing? *(1+1 / 2 Marks)*
 >
-> **Answer to the Polishing Question:**
+> **Answer (Slip vs. Twinning):**
+>
+> * **Crystallographic orientation:** Lattice orientation remains identical across the slip plane in slip; the twinned region is reoriented into a **mirror image** of the matrix across the twin plane.
+> * **Atomic displacement:** Occurs in discrete integer multiples of the Burgers vector in slip ($1b, 2b, \dots$); it is a fraction of the atomic spacing, proportional to the distance from the twin plane, in twinning.
+> * **Planes involved:** Slip is localized on widely spaced, isolated planes; twinning shears **every consecutive atomic plane** within the twinned volume.
+> * **Mechanism:** Progressive glide of individual dislocations in slip; coordinated, collective shear of atomic layers in twinning.
+> * **Surface relief:** Step-like **slip lines** in slip; broad macroscopic **twin bands/wedges** in twinning.
+> * **Occurrence conditions:** Slip dominates at high/room temperature and low strain rate in high-SFE materials with many slip systems (FCC, BCC); twinning dominates at low temperature and high strain rate in low-SFE materials with few slip systems (HCP).
+>
+> **Answer (Polishing Behavior):**
 >
 > * **Why Slip Lines Disappear:**
 >   * Slip lines are merely **surface steps** (microscopic surface topography) created when dislocation lines exit at the free surface.
@@ -872,15 +906,15 @@ The **yield point phenomenon** is a sharp transition from elastic to plastic def
    * Driven by elastic strain energy minimization, $\text{C}$ and $\text{N}$ atoms diffuse toward the **dilated, tensile region below the extra half-plane** of edge dislocations.
    * This dense solute segregation forms an anchored cloud called a **Cottrell Atmosphere**.
 
-```
-              EXTRA HALF PLANE (Compression)
-                   O     O     O
-                   O     O     O
-               --------------------- Slip plane
-                   O   o   o   O
-                        C, N (Solutes)
-               TENSILE REGION (Cottrell Atmosphere)
-```
+   ```
+                 EXTRA HALF PLANE (Compression)
+                      O     O     O
+                      O     O     O
+                  --------------------- Slip plane
+                      O   o   o   O
+                           C, N (Solutes)
+                  TENSILE REGION (Cottrell Atmosphere)
+   ```
 
 3. **Upper Yield Point (UYP, Point $A$):**
    * The solute atoms pin the dislocations firmly within deep potential energy wells.
@@ -903,7 +937,25 @@ The **yield point phenomenon** is a sharp transition from elastic to plastic def
 >
 > **Q:** Write down the different types of strengthening mechanisms. Explain the yield point phenomenon in detail. *(1+2 Marks)*
 >
-> **Answer:** Covered comprehensively in sections 1, 2, and 3 of this Part.
+> **Answer:**
+>
+> **Part 1: Types of Strengthening Mechanisms** *(1 Mark)*
+> All mechanisms act by impeding dislocation motion:
+>
+> 1. **Grain Boundary Strengthening (Hall–Petch):** Grain boundaries act as barriers to slip; $\sigma_y = \sigma_0 + k_y d^{-1/2}$.
+> 2. **Yield Point Phenomenon & Strain Aging:** Interstitial $\text{C}$ and $\text{N}$ atoms pin dislocations through Cottrell atmospheres.
+> 3. **Solid Solution Strengthening:** Substitutional and interstitial solutes create elastic strain fields that interact with dislocations.
+> 4. **Precipitation / Dispersion Strengthening:** Coherent particles are sheared (underaged) or bypassed by Orowan looping (overaged).
+> 5. **Strain (Work) Hardening:** Dislocation–dislocation interactions and pile-ups raise the flow stress.
+> 6. **Transformation Hardening:** A phase transformation (e.g., martensite in steels) creates a dense, heavily strained substructure.
+>
+> **Part 2: Yield Point Phenomenon** *(2 Marks)*
+> Annealed low-carbon (mild) steel shows a sharp **upper yield point (UYP)**, an abrupt stress drop, and a **lower yield point (LYP)** plateau before normal strain hardening begins.
+>
+> * **Cause:** Interstitial $\text{C}$ and $\text{N}$ atoms diffuse to the dilated (tensile) region below the extra half-plane of edge dislocations, forming **Cottrell atmospheres** that pin the dislocations.
+> * **UYP:** A high stress is required to tear the dislocations free of their solute atmospheres.
+> * **Yield drop to LYP:** Once unpinned, dislocations glide at a much lower stress, causing the abrupt drop.
+> * **Lüders bands:** Localized plastic bands nucleate at stress concentrations (e.g., near the grips) and propagate along the gauge length at constant LYP stress (the Lüders plateau). Uniform strain hardening follows after the bands sweep the entire gauge length.
 
 ---
 
@@ -1011,7 +1063,21 @@ The introduction of foreign solute atoms into a pure host metal lattice impedes 
 >
 > **Q:** Explain solid solution strengthening. What is the effect of solute content on the stress–strain response? *(1+1 Marks)*
 >
-> **Answer:** (Draw the stress–strain plot showing pure Al vs. $\text{Al}+c_1$ vs. $\text{Al}+c_2$ where $c_2 > c_1$: identical elastic slope, progressively higher $\sigma_y$ and $\text{UTS}$, lower failure elongation).
+> **Answer:**
+>
+> **Part 1: Solid Solution Strengthening** *(1 Mark)*
+> Foreign solute atoms dissolved in the host lattice create local elastic strain fields that interact with the strain fields of dislocations and impede their glide:
+>
+> * **Substitutional solutes:** Replace solvent atoms on regular lattice sites; larger atoms induce compressive stress, smaller atoms induce tensile stress.
+> * **Interstitial solutes:** Small atoms (e.g., $\text{C, N, H, B}$) occupy interstitial voids between solvent atoms and produce non-spherical (tetragonal) distortion fields.
+> * These solute strain fields pin dislocations and raise the stress required to initiate and sustain plastic flow.
+>
+> **Part 2: Effect of Solute Content on the Stress–Strain Response** *(1 Mark)*
+> Recall the stress–strain plot of pure Al vs. $\text{Al}+c_1$ vs. $\text{Al}+c_2$ where $c_2 > c_1$:
+>
+> * **Elastic slope ($E$) is essentially unchanged:** Young's modulus depends primarily on the base solvent matrix bonds.
+> * **Yield strength ($\sigma_y$) and UTS increase** with solute content: $\Delta\sigma_y \propto c^n$ with $n \approx 1/2$ to $2/3$.
+> * **Ductility (failure elongation) decreases** progressively as the solute content rises.
 
 ---
 
@@ -1117,6 +1183,7 @@ $$\mathbf{\text{SSSS} \longrightarrow \text{Solute Clusters / GP Zones} \longrig
 >        |       *-----------/                                \
 >        +-------+---------------------------------------------+--------> Aging Time (t)
 > ```
+>
 > * **SSSS:** Lowest initial strength; all solutes are in solid solution.
 > * **Under-Aged (GP Zones):** Strength rises rapidly due to coherency strains and dislocation cutting of GP zones.
 > * **Peak-Aged ($\beta''$):** Maximum yield strength; fine, high-density needle-shaped $\beta''$ precipitates provide maximum resistance at the critical transition radius $r_c$.
